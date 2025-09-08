@@ -1,3 +1,4 @@
+#include"Game/Player.h"
 
 
 
@@ -108,6 +109,7 @@ void Init(void)
 
 
 	//ìyãè
+	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player.png"));
 
 
 
