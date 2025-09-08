@@ -1,5 +1,6 @@
 #pragma once
 #include "../Base/Base.h"
+
 //横
 #define MAP_WIDTH  150  //250   
 //縦
@@ -17,7 +18,8 @@ private:
 	float m_Map_Tip;
 public:
 	Map();
-	void Draw();
+	void Update()override;
+	void Draw()	override;
 	//指定座標のチップ番号取得
 	int GetTip(const CVector2D& pos, int* tx = nullptr, int* ty = nullptr);
 	//指定列、指定行のマップチップを取得
@@ -30,5 +32,6 @@ public:
 	//マップとの当たり判定
 	int CollisionRect(const CVector2D& pos, const CRect& rect);
 	int stage[MAP_HEIGHT][MAP_WIDTH];
-
+	/*Player* mp_player;
+	Enemy* me_enemy;*/
 };

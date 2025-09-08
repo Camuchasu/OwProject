@@ -2,6 +2,23 @@
 #include "Base/Base.h"
 class Enemy : public Base
 {
+private:
+	enum 
+	{
+		Run,
+		Death,
+	};
+	enum
+	{
+		eAnim_Run,
+		eAnim_Death,
+	};
+	CImage m_img;
+	//ó‘Ô•Ï”
+	int m_state;
+	void StateRun();
+	void StateDeath();
+	bool m_isGround;
 public:
 	
 	Enemy(const CVector2D& pos, bool flip);
@@ -9,6 +26,6 @@ public:
 	void Update()override;
 	void Draw()override;
 	void Collision(Base* b);
-private:
-	CImage m_img;
+
 };
+extern TexAnimData Enemy_anim_data[];
