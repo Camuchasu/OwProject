@@ -1,114 +1,163 @@
 #pragma once
-#define GRAVITY (9.8f*1.0)
+/// <summary>
+/// オブジェクトの種類
+/// </summary>
+enum {
 
-enum class BaseType {
-	eCamera,
-	eSkyBox,
-	eField,
-	eEnemy,
-	eEnemyManager,
-	eCharactor,
-	ePlayer,
-	eAttack,
-	eBullet,
-	eArrow,
-	ePlayer_Bullet,
-	eEnemy_Bullet,
-	eGrass,
-	eEffect,
-	eUI,
-	eHUD,
-	eCollision,
-	eScene,
-	eEffectManager,
-	eAppearPoint,
-	eMax,
+    eType_Map,
+    eType_Door,
+    eType_AreaChange,
+    eType_Item,
+    eType_TP,
+    eType_Message,
+    eType_Player,
+    eType_Enemy,
+    eType_Enemy1,
+    eType_Enemy2,
+    eType_Enemy3,
+    eType_Enemy4,
+    eType_Enemy5,
+    eType_Enemy6,
+    eType_Enemy7,
+    eType_Enemy8,
+    eType_GameOver,
+    eType_MAXHP,
+    eType_Bullet,
+    eType_Goal,
+    eType_Player_Attack,
+    eType_Enemy_Attack,
+    eType_Effect,
+    eType_UI,
+    eType_Menyu,
+    eType_ItemMenyu,
+    eType_Scene,
+    eType_ItemManeger,
+    eType_HP
 };
-
-
-class Base : public std::enable_shared_from_this<Base> {
-private:
-	BaseType m_type;
+//重力加速度
+#define GRAVITY (9.8f/20)
+/// <summary>
+/// ゲームオブジェクトの基底クラス
+/// </summary>
+class Base {
 public:
-	//座標
-	CVector3D m_pos;
-	//回転値
-	CVector3D m_rot;
-	//スケール
-	CVector3D m_scale;
-	//移動量
-	CVector3D m_vec;
-	//半径
-	float m_rad;
-	//カプセル用
-	CCapsule m_capsule;
-	//削除フラグ
-	int m_kill;
-public:
-	Base(BaseType type);
-	virtual ~Base();
-	//種別の取得
-	BaseType GetType() {
-		return m_type;
-	}
-	//座標の設定
-	void SetPos(const CVector3D& pos) {
-		m_pos = pos;
-	}
-	//座標の取得
-	CVector3D GetPos() {
-		return m_pos;
-	}
-	//回転値の設定
-	void SetRot(const CVector3D& rot) {
-		m_rot = rot;
-	}
-	//回転値の取得
-	CVector3D GetRot() {
-		return m_rot;
-	}
-	void SetKill() {
-		m_kill = true;
-	}
-	virtual CModel* GetModel() {
-		return nullptr;
-	}
+    //オブジェクトの種類
+    int m_type;
+    //座標データ
+    CVector2D m_pos;
+    //過去の位置
+    CVector2D m_pos_old;
+    //半径
+    float m_rad;
+    //移動ベクトル
+    CVector2D m_vec;
 
-	virtual void Update();
-	virtual void Draw();
-	virtual void Collision(const std::shared_ptr<Base>&);
+    //矩形
+    CRect   m_rect;
 
-	friend class BaseManager;
-};
-class BaseManager {
-private:
-	std::list<std::shared_ptr<Base>> m_list;
-	static BaseManager* m_instance;
+    bool m_kill;
+    static std::list<Base*> m_list;
+    //スクロール値
+    static CVector2D m_scroll;
+    int lv;
+    int HP;
+    int exp;
 public:
-	BaseManager();
-	~BaseManager();
-	//インスタンス取得
-	static BaseManager* GetInstance();
-	//即時削除
-	static void ClearInstance();
-	//全てのオブジェクトの更新
-	void UpdateALL();
-	
-	//全てのオブジェクトの描画
-	void DrawALL();
-	//全てのオブジェクト同士の衝突検証
-	void CollisionALL();
-	//全てのオブジェクトの削除
-	void KillALL();
-	//指定種類のオブジェクト削除
-	void Kill(int mask);
-	//全てのオブジェクトの削除チェック
-	void CheckKillALL();
-	//オブジェクトを追加
-	std::shared_ptr<Base> Add(const std::shared_ptr<Base>&);
-	//オブジェクトの検索
-	std::shared_ptr<Base> FindObject(BaseType type);
-	//オブジェクトの検索
-	std::list<std::shared_ptr<Base>> FindObjects(BaseType type);
+    /// <summary>
+    /// コンストラクタ
+    /// </summary>
+    Base(int type);
+    /// <summary>
+    /// デストラクタ
+    /// </summary>
+    virtual ~Base();
+    /// <summary>
+    /// 更新処理
+    /// </summary>
+    virtual void Update();
+    /// <summary>
+    /// 描画処理
+    /// </summary>
+    virtual void Draw();
+    /// <summary>
+    /// オブジェクト削除
+    /// </summary>
+    void SetKill() { m_kill = true; }
+
+    virtual void Collision(Base* b);
+    /// <summary>
+    /// 円同士の当たり判定
+    /// </summary>
+    /// <param name="b1">対象1</param>
+    /// <param name="b2">対象2</param>
+    /// <returns></returns>
+    static bool CollisionCircle(Base* b1, Base* b2);
+    static bool CollisionCharctor(Base* b1, Base* b2);
+
+    /// <summary>
+    /// 全てのオブジェクトの更新
+    /// </summary>
+    static void UpdateAll();
+    /// <summary>
+    /// 全てのオブジェクトの描画
+    /// </summary>
+    static void DrawAll();
+    /// <summary>
+    /// 全てのオブジェクト同士の組み合わせで当たり判定検証
+    /// </summary>
+    static void CollisionAll();
+    /// <summary>
+    /// 全てのオブジェクトの削除チェック
+    /// </summary>
+    static void CheckKillAll();
+
+    /// <summary>
+    /// オブジェクトをリストへ追加
+    /// </summary>
+    /// <param name="b">追加オブジェクト</param>
+    static void Add(Base* b);
+
+    /// <summary>
+    /// 全オブジェクトの削除
+    /// </summary>
+    static void KillAll();
+    /// <summary>
+    /// 指定オブジェクトの削除
+    /// </summary>
+    /// <param name="mask">削除対象オブジェクトのマスク</param>
+    static void Kill(int mask);
+
+    /// <summary>
+    /// リスト内からオブジェクトを探索
+    /// </summary>
+    /// <param name="type">種類</param>
+    /// <returns>最初に見つけたオブジェクト</returns>
+    static Base* FindObject(int type);
+    /// <summary>
+    /// リスト内からオブジェクトを探索
+    /// </summary>
+    /// <param name="type">種類</param>
+    /// <returns>該当種類のオブジェクトのリスト</returns>
+    static std::list<Base*> FindObjects(int type);
+
+    /// <summary>
+    /// 画面内での位置を取得
+    /// </summary>
+    /// <param name="pos">キャラクターなどの座標</param>
+    /// <returns>画面上での位置</returns>
+    static CVector2D GetScreenPos(const CVector2D& pos);
+
+    /// <summary>
+    /// 矩形同士の判定
+    /// </summary>
+    /// <param name="b1">対象</param>
+    /// <param name="b2">対象</param>
+    /// <returns></returns>
+    static bool CollisionRect(Base* b1, Base* b2);
+    /// <summary>
+    /// 矩形の表示
+    /// </summary>
+    void DrawRect();
+
 
 };
