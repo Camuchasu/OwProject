@@ -1,5 +1,5 @@
 #include"Game/Player.h"
-
+#include"Game/Map.h"
 
 
 void MainLoop(void) {
@@ -7,7 +7,10 @@ void MainLoop(void) {
 	//ƒQ[ƒ€’†‚Ì“®‚«‚Í‚±‚±‚É‘‚­
 	//ƒQ[ƒ€’†‚Í‚±‚ÌŠÖ”_‚ğ1•bŠÔ‚É60‰ñŒÄ‚Ño‚µ‚Ä‚¢‚é
 	//--------------------------------------------------------------
-
+	Base::CheckKillAll();
+	Base::UpdateAll();
+	Base::CollisionAll();
+	Base::DrawAll();
 
 
 
@@ -87,8 +90,8 @@ void Init(void)
 	//-----------------------------------------------------
 	//ADD_RESOURCE‚ğ‘‚­‚Æ‚±‚ë
 	//¼‘º
-
-
+	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/Map/haikei.png"));
+	ADD_RESOURCE("Map_Tip1", CImage::CreateImage("Image/Map/Map.png"));
 
 
 
@@ -122,7 +125,7 @@ void Init(void)
 
 	//Add‚ğ‘‚­‚Æ‚±‚ë
 	//¼‘º
-
+	Base::Add(new Map);
 
 
 
