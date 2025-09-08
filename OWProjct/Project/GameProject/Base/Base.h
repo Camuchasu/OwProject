@@ -5,7 +5,6 @@
 enum {
 
     eType_Map,
-    eType_Field,
     eType_Door,
     eType_AreaChange,
     eType_Item,
