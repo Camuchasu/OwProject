@@ -5,6 +5,7 @@
 enum {
 
     eType_Map,
+    eType_Field,
     eType_Door,
     eType_AreaChange,
     eType_Item,
@@ -33,7 +34,6 @@ enum {
     eType_Scene,
     eType_ItemManeger,
     eType_HP,
-    eType_Field,
 };
 //èdóÕâ¡ë¨ìx
 #define GRAVITY (9.8f/20)
