@@ -1,7 +1,7 @@
 #include"Game/Player.h"
 #include"Game/Map.h"
-
-
+#include"Game/Enemy.h"
+#include"Title/Title.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ƒQ[ƒ€’†‚Ì“®‚«‚Í‚±‚±‚É‘‚­
@@ -92,7 +92,7 @@ void Init(void)
 	//¼‘º
 	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/Map/haikei.png"));
 	ADD_RESOURCE("Map_Tip1", CImage::CreateImage("Image/Map/Map.png"));
-
+	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Idle.png"));
 
 
 
@@ -125,8 +125,8 @@ void Init(void)
 
 	//Add‚ğ‘‚­‚Æ‚±‚ë
 	//¼‘º
-	Base::Add(new Map);
-
+	Base::Add(new Map());
+	//Base::Add(new Enemy(CVector2D(3000,300),true));
 
 
 

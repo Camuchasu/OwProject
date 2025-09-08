@@ -1,6 +1,6 @@
 #include"Title.h"
 
-Title::Title() : Base(eType_Field) 
+Title::Title() : Base(eType_Scene)
 {
 	
 }
