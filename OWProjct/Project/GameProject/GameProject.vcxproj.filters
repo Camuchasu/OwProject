@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Game\Player.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Base.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Gimmick.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Goal.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Title.h">
+      <Filter>Title</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game\Player.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Base.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Gimmick.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Goal.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Title.cpp">
+      <Filter>Title</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{ebf0d9b7-de40-4c9f-9262-7c6873ad4e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{f44c102b-4c1c-4917-b6d8-0fcc3d87e483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Title">
+      <UniqueIdentifier>{e9c439a9-219b-4c14-acab-e5b2f679cd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal">
+      <UniqueIdentifier>{d6ec749b-0d91-4bdf-a005-fbe54d8dd254}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
