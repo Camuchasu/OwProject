@@ -32,7 +32,8 @@ enum {
     eType_ItemMenyu,
     eType_Scene,
     eType_ItemManeger,
-    eType_HP
+    eType_HP,
+    eType_Field,
 };
 //d—Í‰Á‘¬“x
 #define GRAVITY (9.8f/20)

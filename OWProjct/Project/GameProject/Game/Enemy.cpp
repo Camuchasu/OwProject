@@ -1,5 +1,8 @@
 #include "Enemy.h"
 
+Enemy::Enemy(const CVector2D& pos) :Base(eType_Enemy) 
+{
+}
 
 Enemy::~Enemy()
 {
