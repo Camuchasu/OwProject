@@ -24,7 +24,9 @@ Map::Map() :Base(eType_Map)
     //画像の複製
     m_img = COPY_RESOURCE("Map_Tip1", CImage);
     m_background = COPY_RESOURCE("BackGround", CImage);
-    m_background.SetSize(1920, 1080);
+    m_message = COPY_RESOURCE("Message", CImage);
+    //当たり判定用矩形設定
+    m_rect = CRect(-40, 38, 40, -38);
     memcpy(stage, stage1data, sizeof(stage1data));
     //m_Map_Tip = 900;
 }
@@ -36,7 +38,10 @@ void Map::Update()
 
 void Map::Draw()
 {
+    m_background.SetSize(1920, 1080);
     m_background.Draw();
+   
+   
     for (int i = 0; i < MAP_HEIGHT; i++) {
         for (int j = 0; j < MAP_WIDTH; j++) {
             //表示させない [i]行 [j]列
@@ -54,7 +59,22 @@ void Map::Draw()
             m_img.Draw();
         }
     }
+    m_message.SetPos(800, 800);
+    //m_message.SetCenter(50, 50);
+    m_message.SetSize(100, 100);
+    m_message.Draw();
+    DrawRect();
 
+}
+
+void Map::Collision(Base* b)
+{
+    switch (b->m_type)
+    {
+    case eType_Player:
+    
+        break;
+    }
 }
 
 

@@ -21,6 +21,7 @@ public:
 	Map();
 	void Update()override;
 	void Draw()	override;
+	void Collision(Base* b) override;
 	//指定座標のチップ番号取得
 	int GetTip(const CVector2D& pos, int* tx = nullptr, int* ty = nullptr);
 	//指定列、指定行のマップチップを取得

@@ -10,9 +10,7 @@ Enemy::Enemy(const CVector2D& pos, bool flip)
 	m_img = COPY_RESOURCE("Enemy", CImage);
 	//再生アニメーション設定
 	m_img.ChangeAnimation(0);
-	//中心位置設定
-	m_img.SetCenter(50, 50);
-	m_img.SetSize(100, 100);
+	
 	//当たり判定用矩形設定
 	m_rect = CRect(-40, 38, 40, -38);
 	//座標
@@ -75,6 +73,9 @@ void Enemy::Draw()
 	m_img.SetPos(GetScreenPos(m_pos));
 	//反転設定
 	m_img.SetFlipH(m_flip);
+	//中心位置設定
+	m_img.SetCenter(50, 50);
+	m_img.SetSize(100, 100);
 	//描画
 	m_img.Draw();
 	//当たり判定矩形表示
