@@ -101,8 +101,8 @@ void Init(void)
 
 
 	//“yŠò
-
-
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));
+	ADD_RESOURCE("Logo", CImage::CreateImage("Image/Title/Logo.png"));
 
 
 
