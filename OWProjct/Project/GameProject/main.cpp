@@ -126,7 +126,7 @@ void Init(void)
 	//Add‚ğ‘‚­‚Æ‚±‚ë
 	//¼‘º
 	Base::Add(new Map());
-	Base::Add(new Enemy(CVector2D(3000,300),true));
+	Base::Add(new Enemy(CVector2D(600,0),true));
 
 
 
