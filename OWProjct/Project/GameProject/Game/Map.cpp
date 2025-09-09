@@ -1,6 +1,7 @@
 #include "Map.h"
 #include "Player.h"
 #include "Enemy.h"
+float Map::m_msc(Base::m_scroll.x);
 static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -23,7 +24,8 @@ Map::Map() :Base(eType_Map)
 {
     //âÊëúÇÃï°êª
     m_img = COPY_RESOURCE("Map_Tip1", CImage);
-    m_background = COPY_RESOURCE("BackGround", CImage);
+    m_Sky = COPY_RESOURCE("Sky", CImage);
+    m_kumo = COPY_RESOURCE("kumo", CImage);
     m_message = COPY_RESOURCE("Message", CImage);
     //ìñÇΩÇËîªíËópãÈå`ê›íË
     m_rect = CRect(-40, 38, 40, -38);
@@ -38,9 +40,14 @@ void Map::Update()
 
 void Map::Draw()
 {
-    m_background.SetSize(1920, 1080);
-    m_background.Draw();
-   
+    m_Sky.SetSize(1920, 1080);
+    m_Sky.Draw();
+    m_kumo.Draw();
+    float sc;
+    m_Sky.Draw();
+    sc = Base::m_scroll.x / 3;
+    m_kumo.SetRect(sc, 0, sc + 1920, 376);
+    m_kumo.Draw();
    
     for (int i = 0; i < MAP_HEIGHT; i++) {
         for (int j = 0; j < MAP_WIDTH; j++) {
