@@ -11,3 +11,4 @@ public:
 	void Draw();
 	void Collision();
 };
+extern TexAnimData Gimmick_anim_data[];
