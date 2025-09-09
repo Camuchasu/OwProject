@@ -1,4 +1,5 @@
 #include "Player.h"
+#include"Map.h"
 
 
 Player::Player(const CVector2D& pos,bool flip) :Base(eType_Player) {
@@ -8,6 +9,8 @@ Player::Player(const CVector2D& pos,bool flip) :Base(eType_Player) {
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(100, 100);
 	m_img.SetCenter(50, 100);
+	//着地フラグ
+	m_is_ground = true;
 }
 
 Player::~Player(){
@@ -67,6 +70,29 @@ void Player::StateIdle() {
 }
 
 void Player::Update(){
+	//移動処理
+	m_pos_old = m_pos;
+	switch (m_state) {
+		//通常状態
+	case eState_Idle:
+		StateIdle();
+		break;
+	}
+	//落ちていたら落下中状態へ移行
+	if (m_is_ground && m_vec.y > GRAVITY * 4)
+	{
+		m_is_ground = false;
+	}
+	//重力による落下
+	m_vec.y += GRAVITY;
+	m_pos += m_vec;
+
+	//アニメーション更新
+	m_img.UpdateAnimation();
+	//スクロール設定
+	m_scroll.x = m_pos.x - 1280 / 2;
+	
+
 }
 
 void Player::Draw(){
@@ -75,8 +101,26 @@ void Player::Draw(){
 	m_img.Draw();
 }
 
-void Player::Collision(Base* b)
-{
+void Player::Collision(Base* b){
+	switch (b->m_type) {
+	case eType_Map:
+		if (Map* m = dynamic_cast<Map*>(b)) {
+			int t = 0;
+			t = m->CollisionRect(CVector2D(m_pos.x, m_pos_old.y), m_rect);
+			if (t != 0) {
+				m_pos.x = m_pos_old.x;
+			}
+			t = m->CollisionRect(CVector2D(m_pos_old.x, m_pos.y), m_rect);
+			if (t != 0) {
+				m_pos.y = m_pos_old.y;
+				//落下速度リセット
+				m_vec.y = 0;
+				//接地フラグON
+				m_is_ground = true;
+			}
+		}
+	}
+
 }
 static TexAnim _idle[] = {
 	{ 0,5 },
