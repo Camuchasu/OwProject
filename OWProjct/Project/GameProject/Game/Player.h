@@ -4,8 +4,8 @@ class Player : public Base {
 private:
 	//アニメーションの種類
 	enum {
-		eAnimIdle = 0,
 		eAnimRun,
+		eAnimIdle,
 		eAnimJump,
 		eAnimFall,
 		eAnimHit,
