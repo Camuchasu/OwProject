@@ -14,6 +14,7 @@ private:
 		eAnim_Death,
 	};
 	CImage m_img;
+	bool m_flip;
 	//ó‘Ô•Ï”
 	int m_state;
 	void StateRun();

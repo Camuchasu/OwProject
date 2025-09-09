@@ -101,8 +101,8 @@ void Init(void)
 
 
 	//ìyäÚ
-
-
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));
+	ADD_RESOURCE("Logo", CImage::CreateImage("Image/Title/Logo.png"));
 
 
 
@@ -126,7 +126,7 @@ void Init(void)
 	//AddÇèëÇ≠Ç∆Ç±ÇÎ
 	//èºë∫
 	Base::Add(new Map());
-	Base::Add(new Enemy(CVector2D(3000,300),true));
+	Base::Add(new Enemy(CVector2D(600,0),true));
 
 
 
