@@ -13,6 +13,7 @@ private:
 	CImage m_background;
 	CImage m_haikei;
 	CImage m_img;
+	CImage m_message;
 	int m_state;
 	//’n–Ê‚Ì‚‚³
 	float m_Map_Tip;
