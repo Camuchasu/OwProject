@@ -112,7 +112,7 @@ void Init(void)
 
 
 	//ìyãè
-	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player.png"));
+	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player/Idle.png", Player_anim_data, 32, 32));
 
 
 
@@ -147,7 +147,7 @@ void Init(void)
 
 
 	//ìyãè
-
+	Base::Add(new Player(CVector2D(650, 300), true));
 
 
 

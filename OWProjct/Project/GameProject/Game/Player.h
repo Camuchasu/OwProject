@@ -6,35 +6,31 @@ private:
 	enum {
 		eAnimIdle = 0,
 		eAnimRun,
-		eAnimJumpUp,
-		eAnimJumpDown,
-		eAnimDamage,
-		eAnimDown,
+		eAnimJump,
+		eAnimFall,
+		eAnimHit,
 	};
 	//ó‘Ô
 	enum {
 		eState_Idle,
-		eState_Damage,
-		eState_Down,
+		eState_Hit,
 	};
 	//ó‘Ô•Ï”
 	int m_state;
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdle();
-	void StateDamage();
-	void StateDown();
 
 	CImage m_img;
 	bool m_flip;
 	bool m_is_ground;
 
 public:
-	Player(const CVector2D& pos);
+	Player(const CVector2D& pos,bool flip);
 	~Player();
 	void Update();
 	void Draw();
 	void Collision(Base* b);
 
-	static TexAnimData _anim_data[];
-
+	
 };
+extern TexAnimData Player_anim_data[];
