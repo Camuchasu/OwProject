@@ -2,6 +2,7 @@
 #include"Game/Map.h"
 #include"Game/Enemy.h"
 #include"Title/Title.h"
+#include"Game/Gimmick.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ÉQÅ[ÉÄíÜÇÃìÆÇ´ÇÕÇ±Ç±Ç…èëÇ≠
@@ -94,7 +95,8 @@ void Init(void)
 	ADD_RESOURCE("Map_Tip1", CImage::CreateImage("Image/Map/Floor.png"));
 	ADD_RESOURCE("Message", CImage::CreateImage("Image/Map/Message.png"));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
-
+	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/Idle.png"));
+	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/SpaikIdle.png"));
 
 
 
@@ -128,7 +130,7 @@ void Init(void)
 	//èºë∫
 	Base::Add(new Map());
 	Base::Add(new Enemy(CVector2D(600,800),true));
-
+	Base::Add(new Gimmick(CVector2D(800, 100)));
 
 
 

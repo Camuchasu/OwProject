@@ -33,6 +33,7 @@ enum {
     eType_Scene,
     eType_ItemManeger,
     eType_HP,
+    eType_Gimmick,
 };
 //d—Í‰Á‘¬“x
 #define GRAVITY (9.8f/20)
