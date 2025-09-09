@@ -8,6 +8,7 @@ Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(100, 100);
 	m_img.SetCenter(50, 100);
+	m_state = eState_Idle;
 	//’…’nƒtƒ‰ƒO
 	m_is_ground = true;
 }
@@ -127,21 +128,6 @@ void Player::Collision(Base* b) {
 		}
 	}
 }
-static TexAnim _idle[] = {
-	{ 0,5 },
-	{ 1,5 },
-	{ 2,5 },
-	{ 3,5 },
-	{ 4,5 },
-	{ 5,5 },
-	{ 6,5 },
-	{ 7,5 },
-	{ 8,5 },
-	{ 9,5 },
-	{ 10,5 },
-	{ 11,5 },
-};
-
 static TexAnim _run[] = {
 	{ 0,5 },
 	{ 1,5 },
@@ -155,18 +141,31 @@ static TexAnim _run[] = {
 	{ 9,5 },
 	{ 10,5 },
 	{ 11,5 },
+};
+
+static TexAnim _idle[] = {
 	{ 12,5 },
+	{ 12,5 },
+	{ 14,5 },
+	{ 15,5 },
+	{ 16,5 },
+	{ 17,5 },
+	{ 18,5 },
+	{ 19,5 },
+	{ 20,5 },
+	{ 21,5 },
+	{ 22,5 },
 };
 static TexAnim _jump[] = {
-	{0,5},
+	{24,5},
 };
 static TexAnim _fall[] = {
-	{0,5},
+	{36,5},
 };
 
  TexAnimData Player_anim_data[] = {
-	ANIMDATA(_idle),
 	ANIMDATA(_run),
+	ANIMDATA(_idle),
 	ANIMDATA(_jump),
 	ANIMDATA(_fall),
 };

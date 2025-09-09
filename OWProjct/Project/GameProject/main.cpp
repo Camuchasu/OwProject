@@ -113,8 +113,7 @@ void Init(void)
 
 
 	//ìyãè
-	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player/Idle.png", Player_anim_data, 32, 32));
-	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player/Run.png", Player_anim_data, 32, 32));
+	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player/PlayerSeat.png", Player_anim_data, 32, 32));
 
 
 
