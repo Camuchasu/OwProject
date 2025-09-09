@@ -7,7 +7,7 @@ static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
     {1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 
@@ -48,7 +48,7 @@ void Map::Draw()
             if (stage1data[i][j] == 0)continue;
             int t = stage1data[i][j];
             //切り抜き    //左　//ue   //migi //sita
-            m_img.SetRect(44 * t, 0, 44 * t + 44, 45);
+            m_img.SetRect(44 * t, 0, 44 * t + 44, 46);
             //サイズ
             m_img.SetSize(MAP_TIP_SIZE, MAP_TIP_SIZE);
 
@@ -57,13 +57,14 @@ void Map::Draw()
             m_img.SetPos(MAP_TIP_SIZE * j - m_scroll.x, MAP_TIP_SIZE * i - m_scroll.y);
             //描画
             m_img.Draw();
+            DrawRect();
         }
     }
-    m_message.SetPos(800, 800);
-    //m_message.SetCenter(50, 50);
-    m_message.SetSize(100, 100);
-    m_message.Draw();
-    DrawRect();
+    //m_message.SetPos(800, 800);
+    ////m_message.SetCenter(50, 50);
+    //m_message.SetSize(100, 100);
+    //m_message.Draw();
+  
 
 }
 

@@ -25,7 +25,7 @@ void Player::StateIdle()
 	//移動フラグ
 	bool move_flag = false;
 	//ジャンプ力
-	const float jump_pow = 12;
+	const float jump_pow = 15;
 	//左移動
 	if (HOLD(CInput::eLeft))
 	{
