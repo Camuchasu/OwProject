@@ -102,6 +102,14 @@ void Player::Update() {
 	m_img.UpdateAnimation();
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
+	//左方向をマップに合わせる
+	if (m_scroll.x < 0) {
+		m_scroll.x = 0;
+	}
+	//右方向をマップに合わせる
+	if (m_scroll.x > 540) {
+		m_scroll.x = 540;
+	}
 }
 
 void Player::Draw() {

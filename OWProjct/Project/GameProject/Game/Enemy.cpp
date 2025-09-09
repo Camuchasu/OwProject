@@ -101,7 +101,12 @@ void Enemy::Collision(Base*b)
 				m_isGround = true;
 			}
 		}
+	case eType_Player:
+	
+		Base::CollisionCharctor(this, b);
+		break;
 	}
+
 }
 
 static TexAnim enemyrun[] = {
