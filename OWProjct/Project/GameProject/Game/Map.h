@@ -10,8 +10,8 @@
 
 class Map : public Base {
 private:
-	CImage m_background;
-	CImage m_haikei;
+	CImage m_Sky;
+	CImage m_kumo;
 	CImage m_img;
 	CImage m_message;
 	int m_state;
@@ -36,4 +36,5 @@ public:
 	int stage[MAP_HEIGHT][MAP_WIDTH];
 	/*Player* mp_player;
 	Enemy* me_enemy;*/
+	static float m_msc;
 };

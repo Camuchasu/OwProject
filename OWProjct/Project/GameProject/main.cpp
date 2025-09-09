@@ -91,7 +91,8 @@ void Init(void)
 	//-----------------------------------------------------
 	//ADD_RESOURCEÇèëÇ≠Ç∆Ç±ÇÎ
 	//èºë∫
-	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/Map/haikei.png"));
+	ADD_RESOURCE("Sky", CImage::CreateImage("Image/Map/Sky.png"));
+	ADD_RESOURCE("kumo", CImage::CreateImage("Image/Map/kumo.png"));
 	ADD_RESOURCE("Map_Tip1", CImage::CreateImage("Image/Map/Floor.png"));
 	ADD_RESOURCE("Message", CImage::CreateImage("Image/Map/Message.png"));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
