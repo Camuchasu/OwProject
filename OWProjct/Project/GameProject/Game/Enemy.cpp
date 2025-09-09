@@ -63,7 +63,7 @@ void Enemy::Update()
 
 	//アニメーション更新
 	m_img.UpdateAnimation();
-	m_scroll.x = m_pos.x - 1280 / 2;
+	//m_scroll.x = m_pos.x - 1280 / 2;
 
 }
 
@@ -78,7 +78,7 @@ void Enemy::Draw()
 	//描画
 	m_img.Draw();
 	//当たり判定矩形表示
-	DrawRect();
+	//DrawRect();
 }
 
 void Enemy::Collision(Base*b)
