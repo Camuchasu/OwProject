@@ -5,6 +5,8 @@ Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos_old = m_pos = pos;
 	m_rad = 12;
+	//“–‚½‚è”»’è—p‹éŒ`İ’è
+	m_rect = CRect(-40, -80, 40, -10);
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(100, 100);
 	m_img.SetCenter(50, 100);
@@ -106,6 +108,7 @@ void Player::Draw() {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.SetFlipH(m_flip);
 	m_img.Draw();
+	//DrawRect();
 }
 
 void Player::Collision(Base* b) {
