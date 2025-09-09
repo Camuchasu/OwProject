@@ -19,7 +19,6 @@ private:
 	int m_state;
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdle();
-
 	CImage m_img;
 	bool m_flip;
 	bool m_is_ground;

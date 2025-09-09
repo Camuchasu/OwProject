@@ -1,8 +1,7 @@
 #include "Player.h"
 #include"Map.h"
 
-
-Player::Player(const CVector2D& pos,bool flip) :Base(eType_Player) {
+Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos_old = m_pos = pos;
 	m_rad = 12;
@@ -13,11 +12,13 @@ Player::Player(const CVector2D& pos,bool flip) :Base(eType_Player) {
 	m_is_ground = true;
 }
 
-Player::~Player(){
+Player::~Player()
+{
 
 }
 
-void Player::StateIdle() {
+void Player::StateIdle()
+{
 	//移動量
 	const float move_speed = 6;
 	//移動フラグ
@@ -25,7 +26,8 @@ void Player::StateIdle() {
 	//ジャンプ力
 	const float jump_pow = 12;
 	//左移動
-	if (HOLD(CInput::eLeft)) {
+	if (HOLD(CInput::eLeft))
+	{
 		//移動量を設定
 		m_pos.x += -move_speed;
 		//反転フラグ
@@ -33,43 +35,49 @@ void Player::StateIdle() {
 		move_flag = true;
 	}
 	//右移動
-	if (HOLD(CInput::eRight)) {
+	if (HOLD(CInput::eRight))
+	{
 		//移動量を設定
 		m_pos.x += move_speed;
 		//反転フラグ
 		m_flip = false;
 		move_flag = true;
-		//ジャンプ
-		if (m_is_ground && PUSH(CInput::eButton2)) {
-			m_vec.y = -jump_pow;
-			m_is_ground = false;
+	}
+	//ジャンプ
+	if (m_is_ground && PUSH(CInput::eButton2))
+	{
+		m_vec.y = -jump_pow;
+		m_is_ground = false;
+	}
+	//ジャンプ中なら
+	if (!m_is_ground)
+	{
+		if (m_vec.y < 0)
+			//上昇アニメーション
+			m_img.ChangeAnimation(eAnimJump, false);
+		else
+			//下降アニメーション
+			m_img.ChangeAnimation(eAnimFall, false);
+	}
+	//地面にいるなら
+	else
+	{
+		//移動中なら
+		if (move_flag)
+		{
+			//走るアニメーション
+			m_img.ChangeAnimation(eAnimRun);
 		}
-		//ジャンプ中なら
-		if (!m_is_ground) {
-			if (m_vec.y < 0)
-				//上昇アニメーション
-				m_img.ChangeAnimation(eAnimJump, false);
-			else
-				//下降アニメーション
-				m_img.ChangeAnimation(eAnimFall, false);
-		}
-		//地面にいるなら
 		else
 		{
-			//移動中なら
-			if (move_flag) {
-				//走るアニメーション
-				m_img.ChangeAnimation(eAnimRun);
-			}
-			else {
-				//待機アニメーション
-				m_img.ChangeAnimation(eAnimIdle);
-			}
+			//待機アニメーション
+			m_img.ChangeAnimation(eAnimIdle);
 		}
 	}
 }
 
-void Player::Update(){
+
+void Player::Update() {
 	//移動処理
 	m_pos_old = m_pos;
 	switch (m_state) {
@@ -91,17 +99,15 @@ void Player::Update(){
 	m_img.UpdateAnimation();
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
-	
-
 }
 
-void Player::Draw(){
+void Player::Draw() {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.SetFlipH(m_flip);
 	m_img.Draw();
 }
 
-void Player::Collision(Base* b){
+void Player::Collision(Base* b) {
 	switch (b->m_type) {
 	case eType_Map:
 		if (Map* m = dynamic_cast<Map*>(b)) {
@@ -120,7 +126,6 @@ void Player::Collision(Base* b){
 			}
 		}
 	}
-
 }
 static TexAnim _idle[] = {
 	{ 0,5 },
@@ -159,7 +164,7 @@ static TexAnim _fall[] = {
 	{0,5},
 };
 
-extern TexAnimData Player_anim_data[] = {
+ TexAnimData Player_anim_data[] = {
 	ANIMDATA(_idle),
 	ANIMDATA(_run),
 	ANIMDATA(_jump),
