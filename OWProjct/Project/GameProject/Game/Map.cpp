@@ -72,9 +72,14 @@ void Map::Collision(Base* b)
     switch (b->m_type)
     {
     case eType_Player:
-    
+        if (Player* p = dynamic_cast<Player*>(b)) {
+            if (Base::CollisionRect(this, p)) {
+               
+            }
+        }
         break;
     }
+   
 }
 
 
