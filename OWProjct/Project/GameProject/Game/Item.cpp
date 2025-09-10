@@ -40,7 +40,10 @@ void Item::Collision(Base* b)
 {
 	switch (b->m_type) {
 	case eType_Player:
-		//if(CollisionRect())
+		if (CollisionRect(this, b))
+		{
+			
+		}
 
 	case eType_Map:
 		if (Map* m = dynamic_cast<Map*>(b)) {
