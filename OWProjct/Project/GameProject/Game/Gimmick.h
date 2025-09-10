@@ -6,12 +6,14 @@ class Gimmick :public Base
 private:
 	enum
 	{
+		eStateIdle,
 		eStateBrink,
 	};
 	CImage m_spaik;
 	bool m_isGround;
+	bool flag;
 	int m_state;
-	//void StateIdle();
+	void StateIdle();
 	void StateBrink();
 public:
 	Gimmick(CVector2D &pos);

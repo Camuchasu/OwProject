@@ -2,9 +2,12 @@
 #include "Player.h"
 #include "Map.h"
 
+#define MOVE_SPEED 0.5
+
 Gimmick::Gimmick(CVector2D &pos)
 	:Base(eType_Gimmick)
 	,m_isGround(false)
+	,flag(true)
 {
 	m_spaik = COPY_RESOURCE("NeedleDossin", CImage);
 	//再生アニメーション設定
@@ -12,17 +15,38 @@ Gimmick::Gimmick(CVector2D &pos)
 	//当たり判定用矩形設定
 	m_rect = CRect(-15, 40, 65, -40);
 	m_pos = pos;
+	m_state = eStateIdle;
 }
 
 
 
+void Gimmick::StateIdle()
+{
+	Base* player = Base::FindObject(eType_Player);
+	if (player)
+	{
+
+		CVector2D v = player->m_pos - m_pos;
+		if (abs(v.x) < 125)
+		{
+			if (abs(v.y) < 500)
+			{
+				m_vec.y += GRAVITY;
+
+			}
+		}
+	}
+}
+
 void Gimmick::StateBrink()
 {
-		m_vec.y -= GRAVITY;
-		if (m_vec.y >= 500)
-		{
-			m_vec.y = 0;
-		}
+	if (m_pos.y <= 300)
+	{
+		flag = true;
+	}
+	else {
+		m_pos -= m_vec;
+	}
 	
 }
 
@@ -31,36 +55,29 @@ void Gimmick::Update()
 	m_pos_old = m_pos;
 	switch (m_state) {
 		//通常状態
+	case eStateIdle:
+		StateIdle();
+		break;
 	case eStateBrink:
 		StateBrink();
 		break;
-		Base* player = Base::FindObject(eType_Player);
-		if (player)
-		{
-
-			CVector2D v = player->m_pos - m_pos;
-			if (abs(v.x) < 125)
-			{
-				if (abs(v.y) < 500)
-				{
-					m_vec.y += GRAVITY;
-				}
-			}
 		}
 		if (m_isGround == true)
 		{
 			m_state = eStateBrink;
 		}
 		//落ちていたら落下中状態へ移行
-		if (m_isGround && m_vec.y > GRAVITY * 4)
+		if (m_isGround && m_vec.y > GRAVITY * 4 && flag==true)
 		{
 			m_isGround = false;
+			m_pos += m_vec;
 		}
-		m_pos += m_vec;
+		
+
 		//アニメーション更新
 		m_spaik.UpdateAnimation();
 	}
-}
+
 
 void Gimmick::Draw()
 {
@@ -88,6 +105,7 @@ void Gimmick::Collision(Base* b)
 				m_vec.y = 0;
 				//接地フラグON
 				m_isGround = true;
+				flag = false;
 			}
 		}
 	}
