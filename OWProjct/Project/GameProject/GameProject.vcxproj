@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
     <ClInclude Include="Game\Enemy.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Game\GameOver.h" />
     <ClInclude Include="Game\Gimmick.h" />
     <ClInclude Include="Game\Map.h" />
     <ClInclude Include="Game\Player.h" />
@@ -31,6 +33,8 @@
   <ItemGroup>
     <ClCompile Include="Base\Base.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Game\GameOver.cpp" />
     <ClCompile Include="Game\Gimmick.cpp" />
     <ClCompile Include="Game\Map.cpp" />
     <ClCompile Include="Game\Player.cpp" />

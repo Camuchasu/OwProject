@@ -1,30 +1,96 @@
 #include "Gimmick.h"
+#include "Player.h"
+#include "Map.h"
 
 Gimmick::Gimmick(CVector2D &pos)
 	:Base(eType_Gimmick)
+	,m_isGround(false)
 {
 	m_spaik = COPY_RESOURCE("NeedleDossin", CImage);
 	//再生アニメーション設定
 	m_spaik.ChangeAnimation(0);
+	//当たり判定用矩形設定
+	m_rect = CRect(-15, 40, 65, -40);
 	m_pos = pos;
+}
+
+
+
+void Gimmick::StateBrink()
+{
+		m_vec.y -= GRAVITY;
+		if (m_vec.y >= 500)
+		{
+			m_vec.y = 0;
+		}
+	
 }
 
 void Gimmick::Update()
 {
-	//アニメーション更新
-	m_spaik.UpdateAnimation();
+	m_pos_old = m_pos;
+	switch (m_state) {
+		//通常状態
+	case eStateBrink:
+		StateBrink();
+		break;
+		Base* player = Base::FindObject(eType_Player);
+		if (player)
+		{
+
+			CVector2D v = player->m_pos - m_pos;
+			if (abs(v.x) < 125)
+			{
+				if (abs(v.y) < 500)
+				{
+					m_vec.y += GRAVITY;
+				}
+			}
+		}
+		if (m_isGround == true)
+		{
+			m_state = eStateBrink;
+		}
+		//落ちていたら落下中状態へ移行
+		if (m_isGround && m_vec.y > GRAVITY * 4)
+		{
+			m_isGround = false;
+		}
+		m_pos += m_vec;
+		//アニメーション更新
+		m_spaik.UpdateAnimation();
+	}
 }
 
 void Gimmick::Draw()
 {
 	m_spaik.SetCenter(25, 50);
-	m_spaik.SetPos(m_pos);
+	m_spaik.SetPos(GetScreenPos(m_pos));
 	m_spaik.SetSize(100, 100);
 	m_spaik.Draw();
+	DrawRect();
 }
 
-void Gimmick::Collision()
+void Gimmick::Collision(Base* b)
 {
+	switch (b->m_type) {
+	case eType_Map:
+		if (Map* m = dynamic_cast<Map*>(b)) {//
+			int t;
+			t = m->CollisionRect(CVector2D(m_pos.x, m_pos_old.y), m_rect);
+			if (t != 0) {
+				m_pos.x = m_pos_old.x;
+			}
+			t = m->CollisionRect(CVector2D(m_pos_old.x, m_pos.y), m_rect);
+			if (t != 0) {
+				m_pos.y = m_pos_old.y;
+				//落下速度リセット
+				m_vec.y = 0;
+				//接地フラグON
+				m_isGround = true;
+			}
+		}
+	}
 }
 static TexAnim gimmickidle[] = {
 

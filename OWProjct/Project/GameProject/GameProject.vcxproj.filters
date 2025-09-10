@@ -23,6 +23,12 @@
     <ClInclude Include="Title\Title.h">
       <Filter>Title</Filter>
     </ClInclude>
+    <ClInclude Include="Game\GameOver.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -46,6 +52,12 @@
     </ClCompile>
     <ClCompile Include="Title\Title.cpp">
       <Filter>Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GameOver.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

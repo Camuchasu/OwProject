@@ -130,8 +130,8 @@ void Init(void)
 	//Add‚ğ‘‚­‚Æ‚±‚ë
 	//¼‘º
 	Base::Add(new Map());
-	Base::Add(new Enemy(CVector2D(600,800),true));
-	Base::Add(new Gimmick(CVector2D(800, 100)));
+	Base::Add(new Enemy(CVector2D(1500,800),true));
+	Base::Add(new Gimmick(CVector2D(800, 500)));
 
 
 

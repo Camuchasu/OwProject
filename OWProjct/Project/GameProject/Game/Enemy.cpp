@@ -68,8 +68,6 @@ void Enemy::Update()
 void Enemy::Draw()
 {
 	//ˆÊ’uİ’è
-	m_img.SetPos(m_pos);
-	//”½“]İ’è
 	m_img.SetPos(GetScreenPos(m_pos));
 	//”½“]İ’è
 	m_img.SetFlipH(m_flip);
