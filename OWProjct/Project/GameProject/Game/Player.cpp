@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "Map.h"
 #include "Enemy.h"
+#include "GameOver.h"
 Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos_old = m_pos = pos;
@@ -86,8 +87,10 @@ void Player::StateIdle()
 void Player::StateDeth()
 {
 	m_img.ChangeAnimation(eAnimDeath, false);
+	
 	if (m_img.CheckAnimationEnd()) {
 		m_kill = true;
+		new GameOver;
 	}
 }
 

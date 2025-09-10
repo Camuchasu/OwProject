@@ -34,6 +34,10 @@ void Enemy::StateRun()
 
 void Enemy::StateDeath()
 {
+	m_img.ChangeAnimation(eAnimDeath, false);
+	if (m_img.CheckAnimationEnd()) {
+		m_kill = true;
+	}
 }
 
 void Enemy::Update()
@@ -86,8 +90,8 @@ void Enemy::Collision(Base*b)
 	case eType_Player:
 		if (Base::CollisionRect(this, b))
 		{
-			m_state = Death;
-			// b->SetKill();
+			//m_state = Death;
+			 b->SetKill();
 		}
 		break;
 
@@ -115,6 +119,7 @@ void Enemy::Collision(Base*b)
 
 static TexAnim enemyrun[] = {
 
+	{ 0,6 },
 	{ 1,6 },
 	{ 2,6 },
 	{ 3,6 },
@@ -126,20 +131,16 @@ static TexAnim enemyrun[] = {
 	{ 9,6 },
 	{ 10,6 },
 	{ 11,6 },
-	{ 12,6 },
+	
 };
 
 static TexAnim enemydeath[] = {
 
-	{ 1,6 },
-	{ 2,6 },
-	{ 3,6 },
-	{ 4,6 },
-	{ 5,6 },
-	{ 6,6 },
-	{ 7,6 },
-	{ 8,6 },
-	{ 9,6 },
+	{ 12,6 },
+	{ 13,6 },
+	{ 14,6 },
+	{ 15,6 },
+	{ 16,6 },
 };
 TexAnimData Enemy_anim_data[] = {
 	ANIMDATA(enemyrun),

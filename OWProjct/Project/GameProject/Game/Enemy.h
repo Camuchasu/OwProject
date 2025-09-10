@@ -10,8 +10,8 @@ private:
 	};
 	enum
 	{
-		eAnim_Run,
-		eAnim_Death,
+		eAnimRun,
+		eAnimDeath,
 	};
 	CImage m_img;
 	bool m_flip;
