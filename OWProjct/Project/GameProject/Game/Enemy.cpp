@@ -1,6 +1,6 @@
 #include "Enemy.h"
 #include "Map.h"
-
+#include"../Base/Base.h"
 //ˆÚ“®‘¬“x
 #define MOVE_SPEED 2.0f
 
@@ -77,12 +77,19 @@ void Enemy::Draw()
 	//•`‰æ
 	m_img.Draw();
 	//“–‚½‚è”»’è‹éŒ`•\Ž¦
-	//DrawRect();
+	DrawRect();
 }
 
 void Enemy::Collision(Base*b)
 {
 	switch (b->m_type) {
+	case eType_Player:
+		if (Base::CollisionRect(this, b))
+		{
+			b->SetKill();
+		}
+		break;
+
 	case eType_Map:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = 0;
@@ -99,12 +106,10 @@ void Enemy::Collision(Base*b)
 				m_isGround = true;
 			}
 		}
-	case eType_Player:
-	
-		Base::CollisionCharctor(this, b);
 		break;
 	}
 
+	
 }
 
 static TexAnim enemyrun[] = {

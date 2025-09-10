@@ -1,6 +1,6 @@
 #include "Player.h"
-#include"Map.h"
-
+#include "Map.h"
+#include "Enemy.h"
 Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos_old = m_pos = pos;
@@ -77,11 +77,15 @@ void Player::StateIdle()
 			m_img.ChangeAnimation(eAnimIdle);
 		}
 	}
+	if (PUSH(CInput::eButton5))
+	{
+		m_state = eState_Death;
+	}
 }
 
 void Player::StateDeth()
 {
-	m_img.ChangeAnimation(eAnimDeth, false);
+	m_img.ChangeAnimation(eAnimDeath, false);
 	if (m_img.CheckAnimationEnd()) {
 		m_kill = true;
 	}
@@ -97,7 +101,7 @@ void Player::Update() {
 		StateIdle();
 		break;
 		//Ž€–Só‘Ô
-	case eState_Deth:
+	case eState_Death:
 		StateDeth();
 		break;
 	}
@@ -128,11 +132,17 @@ void Player::Draw() {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.SetFlipH(m_flip);
 	m_img.Draw();
-	//DrawRect();
+	DrawRect();
 }
 
 void Player::Collision(Base* b) {
 	switch (b->m_type) {
+	case eType_Enemy:
+		if (Base::CollisionRect(this, b))
+		{
+			SetKill();
+		}
+		break;
 	case eType_Map:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = 0;

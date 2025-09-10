@@ -8,12 +8,12 @@ private:
 		eAnimIdle,
 		eAnimJump,
 		eAnimFall,
-		eAnimDeth,
+		eAnimDeath,
 	};
 	//ó‘Ô
 	enum {
 		eState_Idle,
-		eState_Deth,
+		eState_Death,
 	};
 	//ó‘Ô•Ï”
 	int m_state;
