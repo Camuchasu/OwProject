@@ -2,7 +2,7 @@
 #include"../Base/Base.h"
 class GameOver : public Base {
 private:
-
+	CImage m_img;
 public:
 	GameOver();
 	void Update()override;

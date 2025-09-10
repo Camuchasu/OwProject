@@ -15,7 +15,7 @@ Game::Game()
 	Base::Add(new Gimmick(CVector2D(800, 500)));
 	//Base::Add(new Needle(CVector2D(1800, )));
 	Base::Add(new Player(CVector2D(650, 300), true));
-	Base::Add(new Item(CVector2D(800, 500),true));
+	Base::Add(new Item(CVector2D(1400, 500),true));
 
 	m_gamestate = 0;
 }
