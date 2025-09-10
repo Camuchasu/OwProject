@@ -8,8 +8,8 @@ static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-    {0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-    {1,1,1,1,1,1,1,1,0,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+    {0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {2,2,2,2,2,2,2,2,0,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
     {5,5,5,5,5,5,5,5,0,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5},
     {5,5,5,5,5,5,5,5,0,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5},
 
@@ -135,12 +135,12 @@ int Map::CollisionRect(const CVector2D& pos, const CRect& rect)
         pos.y + rect.m_bottom);
     int t;
     t = CollisionPoint(CVector2D(r.m_left, r.m_top));
-    if (t != 0) return t;
+    if (t != 0 || t != 1) return t;
     t = CollisionPoint(CVector2D(r.m_right, r.m_top));
-    if (t != 0) return t;
+    if (t != 0 || t != 1) return t;
     t = CollisionPoint(CVector2D(r.m_left, r.m_bottom));
-    if (t != 0) return t;
+    if (t != 0 || t != 1) return t;
     t = CollisionPoint(CVector2D(r.m_right, r.m_bottom));
-    if (t != 0) return t;
+    if (t != 0 || t != 1) return t;
     return 0;
 }
