@@ -107,6 +107,7 @@ void Init(void)
 	//ìyäÚ
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));
 	ADD_RESOURCE("Logo", CImage::CreateImage("Image/Title/Logo.png"));
+	ADD_RESOURCE("Haikei", CImage::CreateImage("Image/Title/Title.Haikei.png"));
 
 
 
@@ -129,9 +130,9 @@ void Init(void)
 
 	//AddÇèëÇ≠Ç∆Ç±ÇÎ
 	//èºë∫
-	Base::Add(new Map());
-	Base::Add(new Enemy(CVector2D(1500,800),true));
-	Base::Add(new Gimmick(CVector2D(800, 500)));
+	//Base::Add(new Map());
+	//Base::Add(new Enemy(CVector2D(1500,800),true));
+	//Base::Add(new Gimmick(CVector2D(800, 500)));
 
 
 
@@ -140,6 +141,8 @@ void Init(void)
 
 
 	//ìyäÚ
+	Base::Add(new Title);
+
 
 
 
@@ -151,7 +154,7 @@ void Init(void)
 
 
 	//ìyãè
-	Base::Add(new Player(CVector2D(650, 300), true));
+	//Base::Add(new Player(CVector2D(650, 300), true));
 
 
 
