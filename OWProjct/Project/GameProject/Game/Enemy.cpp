@@ -86,7 +86,8 @@ void Enemy::Collision(Base*b)
 	case eType_Player:
 		if (Base::CollisionRect(this, b))
 		{
-			b->SetKill();
+			m_state = Death;
+			// b->SetKill();
 		}
 		break;
 
