@@ -5,6 +5,7 @@ class Gimmick :public Base
 {
 private:
 	CImage m_spaik;
+	
 public:
 	Gimmick(CVector2D &pos);
 	void Update();

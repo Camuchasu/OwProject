@@ -6,6 +6,7 @@ Gimmick::Gimmick(CVector2D &pos)
 	m_spaik = COPY_RESOURCE("NeedleDossin", CImage);
 	//再生アニメーション設定
 	m_spaik.ChangeAnimation(0);
+	m_pos = pos;
 }
 
 void Gimmick::Update()
@@ -16,7 +17,8 @@ void Gimmick::Update()
 
 void Gimmick::Draw()
 {
-	m_spaik.SetCenter(50, 100);
+	m_spaik.SetCenter(25, 50);
+	m_spaik.SetPos(m_pos);
 	m_spaik.SetSize(100, 100);
 	m_spaik.Draw();
 }
