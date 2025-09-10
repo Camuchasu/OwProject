@@ -23,21 +23,18 @@
     <ClInclude Include="Title\Title.h">
       <Filter>Title</Filter>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="Game\GameOver.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\Game.h">
       <Filter>Game</Filter>
     </ClInclude>
-=======
-    <ClInclude Include="Game\Game.h">
+    <ClInclude Include="Game\Brock.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\GameOver.h">
+    <ClInclude Include="Game\Item.h">
       <Filter>Game</Filter>
     </ClInclude>
->>>>>>> db600375e0d9dec285877f8245bedd2fa27c76e3
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -62,21 +59,18 @@
     <ClCompile Include="Title\Title.cpp">
       <Filter>Title</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="Game\GameOver.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\Game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-=======
-    <ClCompile Include="Game\Game.cpp">
+    <ClCompile Include="Game\Brock.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\GameOver.cpp">
+    <ClCompile Include="Game\Item.cpp">
       <Filter>Game</Filter>
     </ClCompile>
->>>>>>> db600375e0d9dec285877f8245bedd2fa27c76e3
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
