@@ -92,7 +92,7 @@ void Gimmick::Collision(Base* b)
 {
 	switch (b->m_type) {
 	case eType_Map:
-		if (Map* m = dynamic_cast<Map*>(b)) {//
+		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t;
 			t = m->CollisionRect(CVector2D(m_pos.x, m_pos_old.y), m_rect);
 			if (t != 0) {

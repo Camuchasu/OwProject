@@ -126,6 +126,10 @@ void Player::Update() {
 	if (m_scroll.x > 1200) {
 		m_scroll.x = 1200;
 	}
+	if (m_pos.y >= 1090)
+	{
+		SetKill();
+	}
 }
 
 void Player::Draw() {
@@ -140,7 +144,7 @@ void Player::Collision(Base* b) {
 	case eType_Enemy:
 		if (Base::CollisionRect(this, b))
 		{
-			SetKill();
+			b->SetKill();
 		}
 		break;
 	case eType_Map:
