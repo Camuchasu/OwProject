@@ -79,6 +79,14 @@ void Player::StateIdle()
 	}
 }
 
+void Player::StateDeth()
+{
+	m_img.ChangeAnimation(eAnimDeth, false);
+	if (m_img.CheckAnimationEnd()) {
+		m_kill = true;
+	}
+}
+
 
 void Player::Update() {
 	//ˆÚ“®ˆ—
@@ -87,6 +95,10 @@ void Player::Update() {
 		//’Êíó‘Ô
 	case eState_Idle:
 		StateIdle();
+		break;
+		//€–Só‘Ô
+	case eState_Deth:
+		StateDeth();
 		break;
 	}
 	//—‚¿‚Ä‚¢‚½‚ç—‰º’†ó‘Ô‚ÖˆÚs
@@ -173,10 +185,20 @@ static TexAnim _jump[] = {
 static TexAnim _fall[] = {
 	{36,5},
 };
+static TexAnim _deth[] = {
+	{60,5},
+	{61,5},
+	{62,5},
+	{63,5},
+	{64,5},
+	{65,5},
+	{66,5},
+};
 
  TexAnimData Player_anim_data[] = {
 	ANIMDATA(_run),
 	ANIMDATA(_idle),
 	ANIMDATA(_jump),
 	ANIMDATA(_fall),
+	ANIMDATA(_deth),
 };

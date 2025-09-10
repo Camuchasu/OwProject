@@ -8,17 +8,18 @@ private:
 		eAnimIdle,
 		eAnimJump,
 		eAnimFall,
-		eAnimHit,
+		eAnimDeth,
 	};
 	//ó‘Ô
 	enum {
 		eState_Idle,
-		eState_Hit,
+		eState_Deth,
 	};
 	//ó‘Ô•Ï”
 	int m_state;
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdle();
+	void StateDeth();
 	CImage m_img;
 	bool m_flip;
 	bool m_is_ground;
