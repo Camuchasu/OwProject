@@ -42,7 +42,7 @@ void Item::Collision(Base* b)
 	case eType_Player:
 		if (CollisionRect(this, b))
 		{
-			
+			b->SetKill();
 		}
 
 	case eType_Map:
