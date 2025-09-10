@@ -1,6 +1,7 @@
 #include "Brock.h"
 
 Brock::Brock()
+	:Base(eType_Brock)
 {
 }
 

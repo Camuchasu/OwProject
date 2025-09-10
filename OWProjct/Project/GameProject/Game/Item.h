@@ -3,10 +3,11 @@
 class Item : public Base
 {
 private:
-
+	CImage m_mush;
+	bool m_isGround;
 public:
-	Item();
+	Item(CVector2D& pos,bool flip);
 	void Update();
 	void Draw();
-	void Collision();
+	void Collision(Base* b);
 };

@@ -10,6 +10,7 @@ enum {
     eType_Item,
     eType_TP,
     eType_Message,
+    eType_Brock,
     eType_Player,
     eType_Enemy,
     eType_Enemy1,

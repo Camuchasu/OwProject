@@ -4,6 +4,7 @@
 #include "Enemy.h"
 #include "Gimmick.h"
 #include "Player.h"
+#include "Item.h"
 
 Game::Game()
 	: Base(eType_Scene)
@@ -12,6 +13,7 @@ Game::Game()
 	Base::Add(new Enemy(CVector2D(1500, 800), true));
 	Base::Add(new Gimmick(CVector2D(800, 500)));
 	Base::Add(new Player(CVector2D(650, 300), true));
+	Base::Add(new Item(CVector2D(800, 500),true));
 
 	m_gamestate = 0;
 }

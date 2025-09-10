@@ -12,7 +12,7 @@ Enemy::Enemy(const CVector2D& pos, bool flip)
 	m_img.ChangeAnimation(0);
 	
 	//“–‚½‚è”»’è—p‹éŒ`İ’è
-	m_rect = CRect(-40, 38, 40, -38);
+	m_rect = CRect(-40, -38, 40, 38);
 	//À•W
 	m_pos_old = m_pos = pos;
 	//’Êíó‘Ô‚Ö
@@ -29,7 +29,7 @@ Enemy::~Enemy()
 
 void Enemy::StateRun()
 {
-	m_pos.x += MOVE_SPEED;
+	//m_pos.x += MOVE_SPEED;
 }
 
 void Enemy::StateDeath()
