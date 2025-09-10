@@ -166,7 +166,7 @@ void Player::Collision(Base* b) {
 	case eType_Item:
 		if(Base::CollisionRect(this,b))
 		{
-			b->SetKill();
+			m_state = eState_Death;
 		}
 	}
 }
