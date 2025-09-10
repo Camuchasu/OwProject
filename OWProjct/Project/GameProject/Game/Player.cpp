@@ -119,8 +119,8 @@ void Player::Update() {
 		m_scroll.x = 0;
 	}
 	//右方向をマップに合わせる
-	if (m_scroll.x > 540) {
-		m_scroll.x = 540;
+	if (m_scroll.x > 1200) {
+		m_scroll.x = 1200;
 	}
 }
 
