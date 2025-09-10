@@ -163,6 +163,11 @@ void Player::Collision(Base* b) {
 				m_is_ground = true;
 			}
 		}
+	case eType_Item:
+		if(Base::CollisionRect(this,b))
+		{
+			b->SetKill();
+		}
 	}
 }
 static TexAnim _run[] = {
