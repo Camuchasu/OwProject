@@ -89,7 +89,7 @@ void Player::StateDeth()
 	m_img.ChangeAnimation(eAnimDeath, false);
 	
 	if (m_img.CheckAnimationEnd()) {
-		//Base::Add(new GameOver(CVector2D(GetScreenPos));
+		Base::Add(new GameOver(CVector2D(m_pos_old.x-300,1080/2-100)));
 		m_kill = true;
 		
 	}
@@ -149,6 +149,7 @@ void Player::Collision(Base* b) {
 		if (Base::CollisionRect(this, b))
 		{
 			b->SetKill();
+			m_state = eState_Death;
 		}
 		break;
 	case eType_Map:

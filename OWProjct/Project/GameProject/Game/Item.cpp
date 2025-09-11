@@ -39,11 +39,11 @@ void Item::Draw()
 void Item::Collision(Base* b)
 {
 	switch (b->m_type) {
-	case eType_Player:
+	/*case eType_Player:
 		if (CollisionRect(this, b))
 		{
 			b->SetKill();
-		}
+		}*/
 
 	case eType_Map:
 		if (Map* m = dynamic_cast<Map*>(b)) {
