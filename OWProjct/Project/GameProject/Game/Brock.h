@@ -14,3 +14,4 @@ public:
 	void Draw()override;
 	void Collision();
 };
+extern TexAnimData Brock_anim_data[];

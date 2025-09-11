@@ -15,9 +15,11 @@ void Brock::Update()
 
 void Brock::Draw()
 {
-	m_brock.SetCenter(25, 50);
+	//êÿÇËî≤Ç´    //ç∂Å@ //ue   //migi //sita
+	//m_brock.SetRect(,,,);
+	m_brock.SetCenter(16,32);
 	m_brock.SetPos(GetScreenPos(m_pos));
-	m_brock.SetSize(50, 50);
+	m_brock.SetSize(100,100);
 	m_brock.Draw();
 	DrawRect();
 }
