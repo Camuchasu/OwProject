@@ -172,6 +172,11 @@ void Player::Collision(Base* b) {
 		{
 			m_state = eState_Death;
 		}
+	case eType_Needle:
+		if(Base::CollisionRect(this, b))
+		{
+			m_state = eState_Death;
+		}
 	}
 }
 static TexAnim _run[] = {
