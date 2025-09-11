@@ -9,11 +9,13 @@ GameOver::GameOver(CVector2D& pos) :Base(eType_GameOver)
 
 void GameOver::Update()
 {
-	if (PUSH(CInput::eButton5)) {
+	if (PUSH(CInput::eButton5) || PUSH(CInput::eButton6)) {
 		//すべてのオブジェクトを破壊
 		Base::KillAll();
-		//タイトルシーンへ
-		Base::Add(new Title());
+
+		Base::Add(new Game());
+		////タイトルシーンへ
+		//Base::Add(new Title());
 	}
 }
 

@@ -82,7 +82,7 @@ void Player::StateIdle()
 			m_img.ChangeAnimation(eAnimIdle);
 		}
 	}
-	if (PUSH(CInput::eButton5))
+	if (PUSH(CInput::eButton6))
 	{
 		m_state = eState_Death;
 	}
