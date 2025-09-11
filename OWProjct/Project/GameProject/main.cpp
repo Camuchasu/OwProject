@@ -3,6 +3,7 @@
 #include"Game/Enemy.h"
 #include"Title/Title.h"
 #include"Game/Gimmick.h"
+#include"Game/Item.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ƒQ[ƒ€’†‚Ì“®‚«‚Í‚±‚±‚É‘‚­
@@ -124,6 +125,7 @@ void Init(void)
 	SOUND("JumpSound")->Load("Sound/Jump.wav", 1);
 	SOUND("Death")->Load("Sound/Death.mp3", 1);
 	SOUND("LevelUp")->Load("Sound/LevelUp.mp3", 1);
+	SOUND("GameOver")->Load("Sound/GameOver.mp3", 1);
 
 
 

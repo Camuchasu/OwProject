@@ -5,6 +5,7 @@ GameOver::GameOver(CVector2D& pos) :Base(eType_GameOver)
 {
 	m_img = COPY_RESOURCE("GameOver", CImage);
 	m_pos_old = m_pos = pos;
+	SOUND("GameOver")->Play();
 }
 
 void GameOver::Update()
