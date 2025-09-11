@@ -15,8 +15,7 @@ private:
 		eState_Idle,
 		eState_Death,
 	};
-	//ó‘Ô•Ï”
-	int m_state;
+	
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdle();
 	void StateDeth();
@@ -25,6 +24,9 @@ private:
 	bool m_is_ground;
 	bool m_highJump;
 public:
+	//ó‘Ô•Ï”
+	int m_state;
+	bool m_kills;
 	Player(const CVector2D& pos,bool flip);
 	~Player();
 	void Update();

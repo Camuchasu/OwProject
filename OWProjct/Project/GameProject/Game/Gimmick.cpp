@@ -86,7 +86,7 @@ void Gimmick::Draw()
 	m_spaik.SetPos(GetScreenPos(m_pos));
 	m_spaik.SetSize(100, 100);
 	m_spaik.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Gimmick::Collision(Base* b)
