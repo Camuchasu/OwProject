@@ -15,6 +15,7 @@ Title::Title() : Base(eType_Scene)
 	m_haikei.SetSize(1920, 1080);
 	m_haikei.SetPos(0, 0);
 	m_cnt = 0;
+	SOUND("Kyoku")->Play();
 }
 
 void Title::Update()
@@ -23,8 +24,8 @@ void Title::Update()
 	{
 		Base::KillAll();
 		Base::Add(new Game());
+		SOUND("Kyoku")->Stop();
 	}
-
 }
 
 void Title::Draw()

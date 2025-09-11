@@ -109,8 +109,7 @@ void Init(void)
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));
 	ADD_RESOURCE("Logo", CImage::CreateImage("Image/Title/Logo.png"));
 	ADD_RESOURCE("Haikei", CImage::CreateImage("Image/Title/Title.Haikei.png"));
-
-
+	SOUND("Kyoku")->Load("Sound/Title.Kyoku.mp3", 1);
 
 
 
@@ -120,12 +119,11 @@ void Init(void)
 	//“y‹
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player/PlayerSeat.png", Player_anim_data, 32, 32));
 	ADD_RESOURCE("Brock", CImage::CreateImage("Image/Map/Block.png",NULL,16,16));
-
-
-
-
-
-
+	SOUND("BGM")->Load("Sound/BGM.mp3", 1);
+	SOUND("GoalSuond")->Load("Sound/GoalSound.mp3", 1);
+	SOUND("JumpSound")->Load("Sound/Jump.mp3", 1);
+	SOUND("Death")->Load("Sound/Death.mp3", 1);
+	SOUND("LevelUp")->Load("Sound/LevelUp.mp3", 1);
 
 
 
