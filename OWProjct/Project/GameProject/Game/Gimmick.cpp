@@ -13,7 +13,7 @@ Gimmick::Gimmick(CVector2D &pos)
 	//再生アニメーション設定
 	m_spaik.ChangeAnimation(0);
 	//当たり判定用矩形設定
-	m_rect = CRect(-15, 40, 65, -40);
+	m_rect = CRect(-15, -40, 65, 40);
 	m_pos = pos;
 	m_state = eStateIdle;
 }
