@@ -24,7 +24,7 @@ void Title::Update()
 		Base::KillAll();
 		Base::Add(new Game());
 	}
-
+	SOUND("Kyoku")->Play();
 }
 
 void Title::Draw()
