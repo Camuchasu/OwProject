@@ -109,6 +109,7 @@ void Enemy::Collision(Base*b)
 				m_vec.y = 0;
 				//Ú’nƒtƒ‰ƒOON
 				m_isGround = true;
+				m_flip = true;
 			}
 		}
 		break;
