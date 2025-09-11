@@ -13,6 +13,7 @@ private:
 	CImage m_Sky;
 	CImage m_kumo;
 	CImage m_img;
+	CImage m_img2;
 	CImage m_message;
 	int m_state;
 	//’n–Ê‚Ì‚‚³

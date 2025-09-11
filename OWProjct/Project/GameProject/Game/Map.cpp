@@ -25,6 +25,7 @@ Map::Map() :Base(eType_Map)
 {
     //画像の複製
     m_img = COPY_RESOURCE("Map_Tip1", CImage);
+    m_img2 = COPY_RESOURCE("Map_Tip2", CImage);
     m_Sky = COPY_RESOURCE("Sky", CImage);
     m_kumo = COPY_RESOURCE("kumo", CImage);
     m_message = COPY_RESOURCE("Message", CImage);
@@ -58,6 +59,10 @@ void Map::Draw()
             //切り抜き    //左　//ue   //migi //sita
             m_img.SetRect(44 * t, 0, 44 * t + 44, 46);
             //サイズ
+            m_img.SetSize(MAP_TIP_SIZE, MAP_TIP_SIZE);
+            //MapTip2 切り抜き
+            m_img2.SetRect(44 * t, 0, 44 * t + 44, 46);
+            //MapTip2 サイズ
             m_img.SetSize(MAP_TIP_SIZE, MAP_TIP_SIZE);
 
 

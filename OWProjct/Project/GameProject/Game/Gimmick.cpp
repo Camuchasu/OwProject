@@ -7,7 +7,7 @@
 Gimmick::Gimmick(CVector2D &pos)
 	:Base(eType_Gimmick)
 	,m_isGround(false)
-	,flag(true)
+	//,flag(true)
 {
 	m_spaik = COPY_RESOURCE("NeedleDossin", CImage);
 	//再生アニメーション設定
@@ -42,7 +42,7 @@ void Gimmick::StateBrink()
 {
 	if (m_pos.y <= 300)
 	{
-		flag = true;
+		//flag = true;
 	}
 	else {
 		m_pos -= m_vec;
@@ -62,12 +62,13 @@ void Gimmick::Update()
 		StateBrink();
 		break;
 		}
-		if (m_isGround == true)
-		{
-			m_state = eStateBrink;
-		}
+		//if (m_isGround == true)
+		//{
+		//	m_state = eStateBrink;
+		//}
 		//落ちていたら落下中状態へ移行
-		if (m_isGround && m_vec.y > GRAVITY * 4 && flag==true)
+		//if (m_isGround && m_vec.y > GRAVITY * 4 && flag==true)
+		if (m_isGround && m_vec.y > GRAVITY * 4)
 		{
 			m_isGround = false;
 			m_pos += m_vec;
@@ -104,7 +105,7 @@ void Gimmick::Collision(Base* b)
 				m_vec.y = 0;
 				//接地フラグON
 				m_isGround = true;
-				flag = false;
+				//flag = false;
 			}
 		}
 	}
