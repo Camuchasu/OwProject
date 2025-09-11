@@ -1,7 +1,11 @@
 #include "Player.h"
 #include "Map.h"
 #include "Enemy.h"
+#include "Gimmick.h"
 #include "GameOver.h"
+
+#define JUMP_POW 15;
+
 Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos_old = m_pos = pos;
@@ -14,6 +18,7 @@ Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_state = eState_Idle;
 	//着地フラグ
 	m_is_ground = true;
+	m_highJump = false;
 }
 
 Player::~Player()
@@ -27,8 +32,7 @@ void Player::StateIdle()
 	const float move_speed = 6;
 	//移動フラグ
 	bool move_flag = false;
-	//ジャンプ力
-	const float jump_pow = 15;
+	
 	//左移動
 	if (HOLD(CInput::eLeft))
 	{
@@ -50,7 +54,7 @@ void Player::StateIdle()
 	//ジャンプ
 	if (m_is_ground && PUSH(CInput::eButton2))
 	{
-		m_vec.y = -jump_pow;
+		m_vec.y = - JUMP_POW;
 		m_is_ground = false;
 	}
 	//ジャンプ中なら
@@ -134,6 +138,15 @@ void Player::Update() {
 	{
 		m_state = eState_Death;
 	}
+	if (m_pos.y <= 0)
+	{
+		m_state = eState_Death;
+	}
+	if (m_highJump == true && PUSH(CInput::eButton2))
+	{
+		float jump = - JUMP_POW;
+		m_vec.y = jump * 25;
+	}
 }
 
 void Player::Draw() {
@@ -149,6 +162,12 @@ void Player::Collision(Base* b) {
 		if (Base::CollisionRect(this, b))
 		{
 			b->SetKill();
+			m_state = eState_Death;
+		}
+		break;
+	case eType_Gimmick:
+		if (Base::CollisionRect(this, b))
+		{
 			m_state = eState_Death;
 		}
 		break;
@@ -172,7 +191,9 @@ void Player::Collision(Base* b) {
 	case eType_Item:
 		if(Base::CollisionRect(this,b))
 		{
-			m_state = eState_Death;
+			m_highJump = true;
+			b->SetKill();
+		    
 		}
 		break;
 	case eType_Needle:

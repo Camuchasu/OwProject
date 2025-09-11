@@ -94,7 +94,7 @@ void Init(void)
 	ADD_RESOURCE("Sky", CImage::CreateImage("Image/Map/Sky.png"));
 	ADD_RESOURCE("kumo", CImage::CreateImage("Image/Map/kumo.png"));
 	ADD_RESOURCE("Map_Tip1", CImage::CreateImage("Image/Map/Floor2.png"));
-	ADD_RESOURCE("Message", CImage::CreateImage("Image/Map/Message.png"));
+	ADD_RESOURCE("Message", CImage::CreateImage("Image/Map/Message1.png"));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
 	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/NDSeat.png", Gimmick_anim_data,54,52));
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));

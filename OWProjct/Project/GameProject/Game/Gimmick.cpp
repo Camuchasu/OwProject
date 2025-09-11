@@ -27,11 +27,11 @@ void Gimmick::StateIdle()
 	{
 
 		CVector2D v = player->m_pos - m_pos;
-		if (abs(v.x) < 125)
+		if (abs(v.x) < 70)
 		{
-			if (abs(v.y) < 500)
+			if (abs(v.y) < 1000)
 			{
-				m_vec.y += GRAVITY;
+				m_vec.y += GRAVITY * 6;
 
 			}
 		}
@@ -71,9 +71,9 @@ void Gimmick::Update()
 		if (m_isGround && m_vec.y > GRAVITY * 4)
 		{
 			m_isGround = false;
-			m_pos += m_vec;
+			
 		}
-		
+		m_pos += m_vec;
 
 		//アニメーション更新
 		m_spaik.UpdateAnimation();
@@ -86,11 +86,13 @@ void Gimmick::Draw()
 	m_spaik.SetPos(GetScreenPos(m_pos));
 	m_spaik.SetSize(100, 100);
 	m_spaik.Draw();
+	DrawRect();
 }
 
 void Gimmick::Collision(Base* b)
 {
 	switch (b->m_type) {
+
 	case eType_Map:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t;

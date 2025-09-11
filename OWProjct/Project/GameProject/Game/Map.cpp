@@ -68,10 +68,10 @@ void Map::Draw()
             DrawRect();
         }
     }
-    //m_message.SetPos(800, 800);
-    ////m_message.SetCenter(50, 50);
-    //m_message.SetSize(100, 100);
-    //m_message.Draw();
+    m_message.SetPos(GetScreenPos(CVector2D(m_pos.x+800,1080/2)));
+    //m_message.SetCenter(50, 50);
+    m_message.SetSize(100, 100);
+    m_message.Draw();
   
 
 }

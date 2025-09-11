@@ -23,7 +23,7 @@ private:
 	CImage m_img;
 	bool m_flip;
 	bool m_is_ground;
-
+	bool m_highJump;
 public:
 	Player(const CVector2D& pos,bool flip);
 	~Player();
