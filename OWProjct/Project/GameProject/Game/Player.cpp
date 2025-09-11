@@ -55,6 +55,7 @@ void Player::StateIdle()
 	//ƒWƒƒƒ“ƒv
 	if (m_is_ground && PUSH(CInput::eButton2))
 	{
+		SOUND("JumpSound")->Play();
 		m_vec.y = - JUMP_POW;
 		m_is_ground = false;
 	}
@@ -91,6 +92,7 @@ void Player::StateIdle()
 
 void Player::StateDeth()
 {
+	SOUND("Death")->Play();
 	m_img.ChangeAnimation(eAnimDeath, false);
 	
 	if (m_img.CheckAnimationEnd()) {

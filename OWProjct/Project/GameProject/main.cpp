@@ -99,7 +99,7 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
 	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/NDSeat.png", Gimmick_anim_data,54,52));
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));
-	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/mushroom.png"));
+	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom_2.png"));
 	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/Gameover.png"));
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal/Goal1.png"));
 
@@ -121,7 +121,7 @@ void Init(void)
 	ADD_RESOURCE("Brock", CImage::CreateImage("Image/Map/Block.png",NULL,16,16));
 	SOUND("BGM")->Load("Sound/BGM.mp3", 1);
 	SOUND("GoalSuond")->Load("Sound/GoalSound.mp3", 1);
-	SOUND("JumpSound")->Load("Sound/Jump.mp3", 1);
+	SOUND("JumpSound")->Load("Sound/Jump.wav", 1);
 	SOUND("Death")->Load("Sound/Death.mp3", 1);
 	SOUND("LevelUp")->Load("Sound/LevelUp.mp3", 1);
 
