@@ -11,7 +11,7 @@ Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_pos_old = m_pos = pos;
 	m_rad = 12;
 	//“–‚½‚è”»’è—p‹éŒ`İ’è
-	m_rect = CRect(-40, -80, 40, -10);
+	m_rect = CRect(-25, -80, 25, -10);
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(100, 100);
 	m_img.SetCenter(50, 100);
@@ -196,6 +196,10 @@ void Player::Collision(Base* b) {
 		    
 		}
 		break;
+	case eType_Brock:
+	{
+
+	}
 	case eType_Needle:
 		if(Base::CollisionRect(this, b))
 		{

@@ -5,6 +5,7 @@ class Needle :public Base
 {
 private:
 	CImage m_needle;
+	CImage m_needle2;
 	bool m_isGround;
 	bool flag;
 public:

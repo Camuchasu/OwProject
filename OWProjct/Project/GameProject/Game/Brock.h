@@ -13,5 +13,6 @@ public:
 	void Update()override;
 	void Draw()override;
 	void Collision();
+	int CollisionRect(const CVector2D& pos, const CRect& rect);
 };
 extern TexAnimData Brock_anim_data[];
