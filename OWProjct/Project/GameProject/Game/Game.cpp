@@ -22,6 +22,8 @@ Game::Game()
 	//Base::Add(new Brock(CVector2D(2100, 800)));
 	Base::Add(new PitFall(CVector2D(2700, 900)));
 	Base::Add(new PitFall(CVector2D(2700, 1050)));
+	Base::Add(new PitFall(CVector2D(2550, 900)));
+	Base::Add(new PitFall(CVector2D(2550, 1050)));
 	Base::Add(new Goal(CVector2D(3500, 800), 1));
 	Base::Add(new Goal(CVector2D(5500, 800), 0));
 

@@ -15,7 +15,7 @@ void PitFall::Update()
 	{
 
 		CVector2D v = player->m_pos - m_pos;
-		if (abs(v.x)<130)
+		if (abs(v.x)<40)
 		{
 			Map* m = dynamic_cast<Map*>(Base::FindObject(eType_Map));
 			m->SetTip(CVector2D(m_pos), 0);
