@@ -26,6 +26,7 @@ static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
 
 Map::Map() :Base(eType_Map)
 {
+    SOUND("BGM")->Play();
     //‰æ‘œ‚Ì•¡»
     m_img = COPY_RESOURCE("Map_Tip1", CImage);
     m_Sky = COPY_RESOURCE("Sky", CImage);

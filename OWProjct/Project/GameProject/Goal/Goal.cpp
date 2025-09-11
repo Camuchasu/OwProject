@@ -5,6 +5,7 @@
 Goal::Goal(const CVector2D& pos,int type)
 :Base(eType_Goal)
 {
+	SOUND("GoalSound")->Play();
 	m_img = COPY_RESOURCE("Goal", CImage);
 	m_pos = pos;
 	m_type = type;
