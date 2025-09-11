@@ -118,7 +118,7 @@ void Init(void)
 
 	//ìyãè
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player/PlayerSeat.png", Player_anim_data, 32, 32));
-	ADD_RESOURCE("Map_Tip2", CImage::CreateImage("Image/Map/BlockSeat.png"));
+	ADD_RESOURCE("Brock", CImage::CreateImage("Image/Map/BlockSeat.png"));
 
 
 

@@ -6,6 +6,7 @@
 #include "Player.h"
 #include "Item.h"
 #include"Needle.h"
+#include"Brock.h"
 
 Game::Game()
 	: Base(eType_Scene)
@@ -16,6 +17,7 @@ Game::Game()
 	Base::Add(new Needle(CVector2D(1800,900)));
 	Base::Add(new Player(CVector2D(650, 300), true));
 	Base::Add(new Item(CVector2D(1400, 500),true));
+	Base::Add(new Brock(CVector2D(1800, 600)));
 
 	m_gamestate = 0;
 }
