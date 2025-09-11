@@ -7,7 +7,7 @@ private:
 
 public:
 	Brock();
-	void Update();
-	void Draw();
+	void Update()override;
+	void Draw()override;
 	void Collision();
 };

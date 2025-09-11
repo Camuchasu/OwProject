@@ -91,7 +91,7 @@ void Enemy::Collision(Base*b)
 		if (Base::CollisionRect(this, b))
 		{
 			//m_state = Death;
-			 b->SetKill();
+			// b->SetKill();
 		}
 		break;
 

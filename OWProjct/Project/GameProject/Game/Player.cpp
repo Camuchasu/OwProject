@@ -127,8 +127,8 @@ void Player::Update() {
 		m_scroll.x = 0;
 	}
 	//右方向をマップに合わせる
-	if (m_scroll.x > 1200) {
-		m_scroll.x = 1200;
+	if (m_scroll.x > 1500) {
+		m_scroll.x = 1500;
 	}
 	if (m_pos.y >= 1090)
 	{
@@ -168,16 +168,19 @@ void Player::Collision(Base* b) {
 				m_is_ground = true;
 			}
 		}
+		break;
 	case eType_Item:
 		if(Base::CollisionRect(this,b))
 		{
 			m_state = eState_Death;
 		}
+		break;
 	case eType_Needle:
 		if(Base::CollisionRect(this, b))
 		{
 			m_state = eState_Death;
 		}
+		break;
 	}
 }
 static TexAnim _run[] = {
