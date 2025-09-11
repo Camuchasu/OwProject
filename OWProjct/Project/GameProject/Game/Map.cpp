@@ -135,12 +135,12 @@ int Map::CollisionRect(const CVector2D& pos, const CRect& rect)
         pos.y + rect.m_bottom);
     int t;
     t = CollisionPoint(CVector2D(r.m_left, r.m_top));
-    if (t != 0 || t != 1) return t;
+    if (t != 0) return t;
     t = CollisionPoint(CVector2D(r.m_right, r.m_top));
-    if (t != 0 || t != 1) return t;
+    if (t != 0) return t;
     t = CollisionPoint(CVector2D(r.m_left, r.m_bottom));
-    if (t != 0 || t != 1) return t;
+    if (t != 0) return t;
     t = CollisionPoint(CVector2D(r.m_right, r.m_bottom));
-    if (t != 0 || t != 1) return t;
+    if (t != 0) return t;
     return 0;
 }
