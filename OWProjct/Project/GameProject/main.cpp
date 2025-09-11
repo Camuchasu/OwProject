@@ -99,7 +99,7 @@ void Init(void)
 	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/NDSeat.png", Gimmick_anim_data,54,52));
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));
 	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/mushroom.png"));
-	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/GameOver.png"));
+	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/Gameover.png"));
 
 
 

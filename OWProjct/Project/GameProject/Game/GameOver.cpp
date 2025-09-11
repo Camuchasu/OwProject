@@ -1,20 +1,26 @@
 #include "GameOver.h"
 #include "Game.h"
-GameOver::GameOver() :Base(eType_GameOver) 
+#include "Title/Title.h"
+GameOver::GameOver(CVector2D& pos) :Base(eType_GameOver)
 {
 	m_img = COPY_RESOURCE("GameOver", CImage);
+	m_pos_old = m_pos = pos;
 }
 
 void GameOver::Update()
 {
 	if (PUSH(CInput::eButton5)) {
-		KillAll();
-		new Game();
+		//すべてのオブジェクトを破壊
+		Base::KillAll();
+		//タイトルシーンへ
+		Base::Add(new Title());
 	}
 }
 
 void GameOver::Draw()
 {
-	m_img.SetPos(1920 / 2, 1080/ 2);
+	//m_img.SetCenter(50, 100);
+	//m_img.SetSize(100, 100);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }

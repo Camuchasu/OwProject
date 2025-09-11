@@ -4,7 +4,7 @@ class GameOver : public Base {
 private:
 	CImage m_img;
 public:
-	GameOver();
+	GameOver(CVector2D& pos);
 	void Update()override;
 	void Draw()override;
 };

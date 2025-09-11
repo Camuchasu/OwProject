@@ -29,7 +29,7 @@ Enemy::~Enemy()
 
 void Enemy::StateRun()
 {
-	//m_pos.x += MOVE_SPEED;
+	m_pos.x += MOVE_SPEED;
 }
 
 void Enemy::StateDeath()

@@ -89,8 +89,9 @@ void Player::StateDeth()
 	m_img.ChangeAnimation(eAnimDeath, false);
 	
 	if (m_img.CheckAnimationEnd()) {
+		//Base::Add(new GameOver(CVector2D(GetScreenPos));
 		m_kill = true;
-		new GameOver;
+		
 	}
 }
 
@@ -131,7 +132,7 @@ void Player::Update() {
 	}
 	if (m_pos.y >= 1090)
 	{
-		SetKill();
+		m_state = eState_Death;
 	}
 }
 
