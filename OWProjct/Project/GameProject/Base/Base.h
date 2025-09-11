@@ -36,6 +36,7 @@ enum {
     eType_HP,
     eType_Gimmick,
     eType_Needle,
+    eType_Pit,
 };
 //d—Í‰Á‘¬“x
 #define GRAVITY (9.8f/20)

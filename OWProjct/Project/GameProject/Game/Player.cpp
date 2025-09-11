@@ -10,6 +10,7 @@ Player::Player(const CVector2D& pos, bool flip) :Base(eType_Player) {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos_old = m_pos = pos;
 	m_rad = 12;
+	m_kills = false;
 	//“–‚½‚è”»’è—p‹éŒ`Ý’è
 	m_rect = CRect(-25, -80, 25, -10);
 	m_img.ChangeAnimation(0);
@@ -147,13 +148,17 @@ void Player::Update() {
 		float jump = - JUMP_POW;
 		m_vec.y = jump * 25;
 	}
+	if (m_kills)
+	{
+		m_state = eState_Death;
+	}
 }
 
 void Player::Draw() {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.SetFlipH(m_flip);
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Player::Collision(Base* b) {
@@ -189,24 +194,21 @@ void Player::Collision(Base* b) {
 		}
 		break;
 	case eType_Item:
-		if(Base::CollisionRect(this,b))
+		if (Base::CollisionRect(this, b))
 		{
 			m_highJump = true;
 			b->SetKill();
-		    
+
 		}
 		break;
-	case eType_Brock:
-	{
-
-	}
 	case eType_Needle:
-		if(Base::CollisionRect(this, b))
+		if (Base::CollisionRect(this, b))
 		{
 			m_state = eState_Death;
 		}
 		break;
 	}
+
 }
 static TexAnim _run[] = {
 	{ 0,5 },

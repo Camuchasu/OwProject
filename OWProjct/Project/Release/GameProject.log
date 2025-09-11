@@ -1,0 +1,139 @@
+﻿  Base.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Base/Base.cpp' をコンパイルしています)
+  
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Base\Base.cpp(62,14): warning C4305: '*=': 'double' から 'float' へ切り詰めます。
+  Brock.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Brock.cpp' をコンパイルしています)
+  
+  Enemy.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Enemy.cpp' をコンパイルしています)
+  
+  Game.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Game.cpp' をコンパイルしています)
+  
+  GameOver.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/GameOver.cpp' をコンパイルしています)
+  
+  Gimmick.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Gimmick.cpp' をコンパイルしています)
+  
+  Item.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Item.cpp' をコンパイルしています)
+  
+  Map.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Map.cpp' をコンパイルしています)
+  
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Game\Map.cpp(62,45): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Game\Map.cpp(62,30): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Game\Map.cpp(101,11): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Game\Map.cpp(106,11): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Game\Map.cpp(129,13): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Game\Map.cpp(132,13): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+  Needle.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Needle.cpp' をコンパイルしています)
+  
+  PitFall.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/PitFall.cpp' をコンパイルしています)
+  
+  Player.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Game/Player.cpp' をコンパイルしています)
+  
+  Goal.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Goal/Goal.cpp' をコンパイルしています)
+  
+  main.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+  Title.cpp
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\include\libavutil\rational.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Title/Title.cpp' をコンパイルしています)
+  
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Title\Title.cpp(39,14): warning C4244: '+=': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\24051\Downloads\OwProject\OWProjct\Project\GameProject\Title\Title.cpp(55,31): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+  コードを生成中...
+glfw.lib(init.obj) : warning LNK4099: PDB '' が 'glfw.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(window.obj) : warning LNK4099: PDB '' が 'glfw.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(input.obj) : warning LNK4099: PDB '' が 'glfw.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(context.obj) : warning LNK4099: PDB '' が 'glfw.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_init.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_time.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(monitor.obj) : warning LNK4099: PDB '' が 'glfw.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(vulkan.obj) : warning LNK4099: PDB '' が 'glfw.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_window.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+glfw.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(egl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+     ライブラリ C:\Users\24051\Downloads\OwProject\OWProjct\Project\/../Game/GameProject.lib とオブジェクト C:\Users\24051\Downloads\OwProject\OWProjct\Project\/../Game/GameProject.exp を作成中
+  コード生成しています。
+  コード生成が終了しました。
+glfw.lib(init.obj) : warning LNK4099: PDB '' が 'glfw.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(window.obj) : warning LNK4099: PDB '' が 'glfw.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(input.obj) : warning LNK4099: PDB '' が 'glfw.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(context.obj) : warning LNK4099: PDB '' が 'glfw.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_init.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_time.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(monitor.obj) : warning LNK4099: PDB '' が 'glfw.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(vulkan.obj) : warning LNK4099: PDB '' が 'glfw.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_window.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glfw.lib(egl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CVector.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CVector.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CRect.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CRect.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(Utility.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(Utility.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CResource.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CResource.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CImage.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CImage.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CInput.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CInput.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(GL.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(GL.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CLight.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CLight.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CCamera.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CCamera.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CSound.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CSound.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CFPS.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CFPS.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CShader.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CShader.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CMultiThread.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CMultiThread.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CMatrix.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CMatrix.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CCollision.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CCollision.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CTexture.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CTexture.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CRendaring.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CRendaring.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CTextureFrame.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CTextureFrame.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CShadow.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CShadow.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glew.lib(glew.obj) : warning LNK4099: PDB '' が 'glew.lib(glew.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(glpng.obj) : warning LNK4099: PDB '' が 'glpng.lib(glpng.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngrtran.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngrtran.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(png.obj) : warning LNK4099: PDB '' が 'glpng.lib(png.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngread.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngread.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngget.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngget.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngmem.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngmem.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngtrans.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngtrans.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngerror.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngerror.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(crc32.obj) : warning LNK4099: PDB '' が 'glpng.lib(crc32.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(inflate.obj) : warning LNK4099: PDB '' が 'glpng.lib(inflate.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngrutil.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngrutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngrio.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngrio.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(zutil.obj) : warning LNK4099: PDB '' が 'glpng.lib(zutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(infblock.obj) : warning LNK4099: PDB '' が 'glpng.lib(infblock.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(adler32.obj) : warning LNK4099: PDB '' が 'glpng.lib(adler32.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngset.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngset.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(infutil.obj) : warning LNK4099: PDB '' が 'glpng.lib(infutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(inftrees.obj) : warning LNK4099: PDB '' が 'glpng.lib(inftrees.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(infcodes.obj) : warning LNK4099: PDB '' が 'glpng.lib(infcodes.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(inffast.obj) : warning LNK4099: PDB '' が 'glpng.lib(inffast.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  GameProject.vcxproj -> C:\Users\24051\Downloads\OwProject\OWProjct\Game\GameProject.exe

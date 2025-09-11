@@ -26,6 +26,8 @@ public:
 	int GetTip(const CVector2D& pos, int* tx = nullptr, int* ty = nullptr);
 	//指定列、指定行のマップチップを取得
 	int GetTip(int x, int y);
+	void SetTip(int col, int row, int type);
+	void SetTip(const CVector2D& pos, int type);
 	float GetGroundY() {
 		return m_Map_Tip;
 	}

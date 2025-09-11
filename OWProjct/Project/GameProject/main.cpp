@@ -101,7 +101,7 @@ void Init(void)
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));
 	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/mushroom.png"));
 	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/Gameover.png"));
-
+	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal/Goal1.png"));
 
 
 
@@ -109,8 +109,7 @@ void Init(void)
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));
 	ADD_RESOURCE("Logo", CImage::CreateImage("Image/Title/Logo.png"));
 	ADD_RESOURCE("Haikei", CImage::CreateImage("Image/Title/Title.Haikei.png"));
-
-
+	SOUND("Kyoku")->Load("Sound/Title.Kyoku.mp3", 1);
 
 
 
