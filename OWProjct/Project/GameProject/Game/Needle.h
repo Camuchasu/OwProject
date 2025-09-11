@@ -8,22 +8,10 @@ private:
 	CImage m_needle;
 	bool m_isGround;
 	bool flag;
+	bool m_isFly;
 	int m_type;
 public:
-	struct TypeNeedle
-	{
-		enum
-		{
-			eNeedle,
-			eFoolNeedle,
-		};
-		std::string name;
-		int type;
-		std::string name1;
-		std::string name2;
-	};
-	static std::vector<TypeNeedle> Needles;
-	Needle(CVector2D& pos);
+	Needle(CVector2D& pos,int type);
 	void Update();
 	void Draw();
 	void Collision(Base* b);

@@ -4,6 +4,7 @@
 #include"Title/Title.h"
 #include"Game/Gimmick.h"
 #include"Game/Item.h"
+#include"UI/UI.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ÉQÅ[ÉÄíÜÇÃìÆÇ´ÇÕÇ±Ç±Ç…èëÇ≠
@@ -100,11 +101,13 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
 	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/NDSeat.png", Gimmick_anim_data,54,52));
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));
-	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom_2.png"));
+	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom_2.png",0,64,64));
 	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/Gameover.png"));
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal/Goal1.png"));
-
-
+	ADD_RESOURCE("UI1", CImage::CreateImage("Image/UI/UIR.png"));
+	ADD_RESOURCE("UI2", CImage::CreateImage("Image/UI/UIJ.png"));
+	ADD_RESOURCE("UI3", CImage::CreateImage("Image/UI/x.png"));
+	ADD_RESOURCE("UI4", CImage::CreateImage("Image/UI/ki-bo-do.png"));
 
 	//ìyäÚ
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));

@@ -1,14 +1,7 @@
 #include "Needle.h"
+#include "Player.h"
 
-std::vector<Needle::TypeNeedle> Needle::Needles =
-{
-	{"dammy",Needle::TypeNeedle::eNeedle,},
-	{"Needle1",Needle::TypeNeedle::eNeedle,"notFly"},
-	{"Needle2",Needle::TypeNeedle::eFoolNeedle,"Fly"},
-	
-};
-
-Needle::Needle(CVector2D& pos): Base(eType_Needle){
+Needle::Needle(CVector2D& pos,int type): Base(eType_Needle){
 	m_needle = COPY_RESOURCE("Needle", CImage);
 	m_rect = CRect(-21, 0, 23, -21);
 	m_pos = pos;
@@ -16,7 +9,20 @@ Needle::Needle(CVector2D& pos): Base(eType_Needle){
 
 void Needle::Update()
 {
+	Base* player = Base::FindObject(eType_Player);
+	if (player && m_isFly)
+	{
 
+		CVector2D v = player->m_pos - m_pos;
+		if (abs(v.x) < 70)
+		{
+			if (abs(v.y) < 1000)
+			{
+				m_vec.y -= GRAVITY * 6;
+
+			}
+		}
+	}
 }
 
 void Needle::Draw()
@@ -30,5 +36,18 @@ void Needle::Draw()
 
 void Needle::Collision(Base* b)
 {
-
+	switch (b->m_type) {
+	case eType_Player:
+		if (Player* p = dynamic_cast<Player*>(Base::FindObject(eType_Player)))
+		{
+			if (Base::CollisionRect(this, b))
+			{
+				if (m_type == 1) {
+					m_isFly = true;
+				}
+				if (m_type == 0)return;
+			}
+			break;
+		}
+	}
 }
