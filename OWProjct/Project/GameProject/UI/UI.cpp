@@ -47,5 +47,5 @@ void UI::Draw()
 	/*m_UI7.SetPos(GetScreenPos(CVector2D(m_pos.x + 330, 1080 / 2 - 50)));
 	m_UI7.SetSize(100, 100);
 	m_UI7.Draw();*/
-	m_UI_text.Draw(2500, 200, 1.0f, 1.0f, 1.0f, "ここに立ち止まれ！！");
+	m_UI_text.Draw(2500, 550, 1.0f, 0.0f, 0.0f, "ここで立ち止まれ！！");
 }

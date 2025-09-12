@@ -35,7 +35,7 @@ Game::Game()
 	Base::Add(new UI(CVector2D(500, 440)));
 	Base::Add(new UI(CVector2D(500, 460)));
 	Base::Add(new Goal(CVector2D(3500, 810), 1));
-	Base::Add(new Goal(CVector2D(5600, 800), 0));
+	Base::Add(new Goal(CVector2D(5600, 810), 0));
 
 	m_gamestate = 0;
 }
