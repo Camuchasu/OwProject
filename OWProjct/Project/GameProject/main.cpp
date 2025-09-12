@@ -108,6 +108,7 @@ void Init(void)
 	ADD_RESOURCE("UI2", CImage::CreateImage("Image/UI/UIJ.png"));
 	ADD_RESOURCE("UI3", CImage::CreateImage("Image/UI/x.png"));
 	ADD_RESOURCE("UI4", CImage::CreateImage("Image/UI/ki-bo-do.png"));
+	ADD_RESOURCE("UI5", CImage::CreateImage("Image/UI/Board.png"));
 	ADD_RESOURCE("Sl", CImage::CreateImage("Image/Gameover/Supplement.png"));
 
 

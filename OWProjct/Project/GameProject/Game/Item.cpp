@@ -8,7 +8,7 @@ Item::Item(CVector2D& pos, bool flip)
 	SOUND("LevelUp")->Play();
 	m_mush = COPY_RESOURCE("Mushroom", CImage);
 	m_pos = pos;
-	m_rect = CRect(-40, -80, 40, -10);
+	m_rect = CRect(-10, -90, 60, -10);
 	//’…’nƒtƒ‰ƒO
 	m_isGround = true;
 }
@@ -31,7 +31,7 @@ void Item::Update()
 void Item::Draw()
 {
 	m_mush.SetCenter(50, 100);
-	m_mush.SetSize(100,100);
+	m_mush.SetSize(150,100);
 	m_mush.SetPos(GetScreenPos(m_pos));
 	m_mush.Draw();
 	//DrawRect();

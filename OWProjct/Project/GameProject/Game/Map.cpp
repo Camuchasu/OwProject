@@ -10,7 +10,7 @@ static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},//2
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},//3
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},//4
-    {0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},//5
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},//5
     {2,2,2,2,2,2,2,2,0,0,2,2,2,2,2,2,2,2,2,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},//6
     {5,5,5,5,5,5,5,5,0,0,5,5,5,5,5,5,5,5,5,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5},//7
     {5,5,5,5,5,5,5,5,0,0,5,5,5,5,5,5,5,5,5,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5},//8
@@ -32,6 +32,7 @@ Map::Map() :Base(eType_Map)
     m_Sky = COPY_RESOURCE("Sky", CImage);
     m_kumo = COPY_RESOURCE("kumo", CImage);
     m_message = COPY_RESOURCE("Message", CImage);
+    m_message2 = COPY_RESOURCE("Message", CImage);
     //ìñÇΩÇËîªíËópãÈå`ê›íË
     m_rect = CRect(-40, 38, 40, -38);
     memcpy(stage, stage1data, sizeof(stage1data));
@@ -73,12 +74,13 @@ void Map::Draw()
         }
     }
     
-    m_message.SetPos(GetScreenPos(CVector2D(m_pos.x+550,1080/2-100)));
-    //m_message.SetCenter(50, 50);
+    m_message.SetPos(GetScreenPos(CVector2D(m_pos.x+560,1080/2-100)));
     m_message.SetSize(500, 300);
     m_message.Draw();
   
-
+    m_message2.SetPos(GetScreenPos(CVector2D(m_pos.x + 2070, 1080 / 2 - 100)));
+    m_message2.SetSize(500, 300);
+    m_message2.Draw();
 }
 
 void Map::Collision(Base* b)

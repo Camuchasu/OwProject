@@ -14,6 +14,7 @@ private:
 	CImage m_kumo;
 	CImage m_img;
 	CImage m_message;
+	CImage m_message2;
 	int m_state;
 	//’n–Ê‚Ì‚‚³
 	float m_Map_Tip;
