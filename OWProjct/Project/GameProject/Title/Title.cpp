@@ -8,8 +8,8 @@ Title::Title() : Base(eType_Scene)
 	m_haikei = COPY_RESOURCE("Haikei", CImage);
 	m_start = COPY_RESOURCE("Title", CImage);
 	m_start = COPY_RESOURCE("Logo", CImage);
-	m_title.SetSize(450, 200);
-	m_title.SetPos(700, 200);
+	m_title.SetSize(1200, 250);
+	m_title.SetPos(350, 200);
 	m_Logo.SetSize(800, 120);
 	m_Logo.SetPos(550, 800);
 	m_haikei.SetSize(1920, 1080);
