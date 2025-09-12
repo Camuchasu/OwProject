@@ -12,7 +12,7 @@ Enemy::Enemy(const CVector2D& pos, bool flip)
 	m_img.ChangeAnimation(0);
 	
 	//当たり判定用矩形設定
-	m_rect = CRect(-40, -52, 40, 38);
+	m_rect = CRect(-40, -52, 60, 28);
 	//座標
 	m_pos_old = m_pos = pos;
 	//通常状態へ
@@ -77,7 +77,7 @@ void Enemy::Draw()
 	m_img.SetFlipH(m_flip);
 	//中心位置設定
 	m_img.SetCenter(50, 50);
-	m_img.SetSize(100, 100);
+	m_img.SetSize(120, 120);
 	//描画
 	m_img.Draw();
 	//当たり判定矩形表示

@@ -15,16 +15,30 @@ Item::Item(CVector2D& pos, bool flip)
 
 void Item::Update()
 {
-	//移動処理
-	m_pos_old = m_pos;
-	m_pos.x += MOVE_SPEED;
-	//落ちていたら落下中状態へ移行
-	if (m_isGround && m_vec.y > GRAVITY * 4)
+	Base* player = Base::FindObject(eType_Player);
+	if (player)
 	{
-		m_isGround = false;
+
+		CVector2D v = player->m_pos - m_pos;
+		if (abs(v.x) < 70)
+		{
+			if (abs(v.y) < 1000)
+			{
+				m_vec.y += GRAVITY ;
+
+			}
+		}
 	}
-	//重力による落下
-	m_vec.y += GRAVITY;
+	////移動処理
+	//m_pos_old = m_pos;
+	//m_pos.x += MOVE_SPEED;
+	////落ちていたら落下中状態へ移行
+	//if (m_isGround && m_vec.y > GRAVITY * 4)
+	//{
+	//	m_isGround = false;
+	//}
+	////重力による落下
+	//m_vec.y += GRAVITY;
 	m_pos += m_vec;
 }
 
