@@ -2,7 +2,6 @@
 
 UI::UI(CVector2D& pos)
 	:Base(eType_UI)
-	, m_UI_text("C:\\Windows\\Fonts\\msgothic.ttc", 30)
 {
 	m_UI1 = COPY_RESOURCE("UI1", CImage);
 	m_UI2 = COPY_RESOURCE("UI2", CImage);
@@ -11,6 +10,7 @@ UI::UI(CVector2D& pos)
 	m_UI5 = COPY_RESOURCE("UI5", CImage);
 	m_UI6 = COPY_RESOURCE("UI5", CImage);
 	m_UI7 = COPY_RESOURCE("UI5", CImage);
+	m_UI8 = COPY_RESOURCE("UI6", CImage);
 	m_pos = pos;
 }
 
@@ -47,5 +47,8 @@ void UI::Draw()
 	/*m_UI7.SetPos(GetScreenPos(CVector2D(m_pos.x + 330, 1080 / 2 - 50)));
 	m_UI7.SetSize(100, 100);
 	m_UI7.Draw();*/
-	m_UI_text.Draw(2500, 550, 1.0f, 0.0f, 0.0f, "Ç±Ç±Ç≈óßÇøé~Ç‹ÇÍÅIÅI");
+	
+	m_UI8.SetPos(GetScreenPos(CVector2D(m_pos.x + 1650, 500)));
+	m_UI8.SetSize(250, 150);
+	m_UI8.Draw();
 }

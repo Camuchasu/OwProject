@@ -1,6 +1,7 @@
 #include "Goal.h"
 #include "Title/Title.h"
 #include "Game/Player.h"
+#include "Game/Enemy.h"
 #include"Goal/Clear.h"
 Goal::Goal(const CVector2D& pos,int type)
 :Base(eType_Goal)
@@ -9,7 +10,7 @@ Goal::Goal(const CVector2D& pos,int type)
 	m_img = COPY_RESOURCE("Goal", CImage);
 	m_pos = pos;
 	m_type = type;
-	m_rect = CRect(0, 0, 100, 100);
+	m_rect = CRect(0, 0, 80, 80);
 }
 
 void Goal::Update()
@@ -40,6 +41,15 @@ void Goal::Collision(Base* b)
 				{
 					Base::Add(new Clear());
 				}
+			}
+			break;
+		}
+	case eType_Enemy:
+		if (Enemy* e = dynamic_cast<Enemy*>(Base::FindObject(eType_Enemy)))
+		{
+			if (Base::CollisionRect(this, b) && m_type == 0)
+			{
+				SetKill();
 			}
 			break;
 		}

@@ -11,9 +11,9 @@ private:
 	CImage m_UI5;
 	CImage m_UI6;
 	CImage m_UI7;
+	CImage m_UI8;
+	CImage m_UI9;
 
-	//文字表示オブジェクト
-	CFont m_UI_text;
 public:
 	UI(CVector2D& pos);
 	void Update()override;
