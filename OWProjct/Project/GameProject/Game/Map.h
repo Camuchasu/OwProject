@@ -15,6 +15,7 @@ private:
 	CImage m_img;
 	CImage m_message;
 	CImage m_message2;
+	CImage m_message3;
 	int m_state;
 	//’n–Ê‚Ì‚‚³
 	float m_Map_Tip;

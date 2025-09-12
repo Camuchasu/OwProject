@@ -13,6 +13,7 @@ private:
 	CImage m_UI7;
 	CImage m_UI8;
 	CImage m_UI9;
+	CImage m_UI10;
 
 public:
 	UI(CVector2D& pos);

@@ -81,6 +81,8 @@ void Map::Draw()
     m_message2.SetPos(GetScreenPos(CVector2D(m_pos.x + 2070, 1080 / 2 - 100)));
     m_message2.SetSize(500, 300);
     m_message2.Draw();
+
+   
 }
 
 void Map::Collision(Base* b)

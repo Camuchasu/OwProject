@@ -11,6 +11,8 @@ UI::UI(CVector2D& pos)
 	m_UI6 = COPY_RESOURCE("UI5", CImage);
 	m_UI7 = COPY_RESOURCE("UI5", CImage);
 	m_UI8 = COPY_RESOURCE("UI6", CImage);
+	m_UI9 = COPY_RESOURCE("UI7", CImage);
+	m_UI10 = COPY_RESOURCE("Message", CImage);
 	m_pos = pos;
 }
 
@@ -51,4 +53,14 @@ void UI::Draw()
 	m_UI8.SetPos(GetScreenPos(CVector2D(m_pos.x + 1650, 500)));
 	m_UI8.SetSize(250, 150);
 	m_UI8.Draw();
+
+	
+	m_UI10.SetPos(GetScreenPos(CVector2D(m_pos.x + 4800, 1080 / 2 - 100)));
+	m_UI10.SetSize(500, 300);
+	m_UI10.Draw();
+
+	m_UI9.SetPos(GetScreenPos(CVector2D(m_pos.x + 4900, 500)));
+	m_UI9.SetSize(250, 150);
+	m_UI9.Draw();
+
 }
