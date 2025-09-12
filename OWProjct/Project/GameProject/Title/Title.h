@@ -9,7 +9,7 @@ class Title :public Base
 	CImage m_start;
 	int m_cnt;
 	int m_fontstate;
-	int m_alpha;
+	float m_alpha;
 public:
 	Title();
 	void Update()override;

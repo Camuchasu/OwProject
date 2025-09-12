@@ -101,7 +101,7 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
 	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/NDSeat.png", Gimmick_anim_data,54,52));
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));
-	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom3.png"));
+	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom.png"));
 	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/Gameover.png"));
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal/Goal1.png"));
 	ADD_RESOURCE("UI1", CImage::CreateImage("Image/UI/UIR.png"));

@@ -15,6 +15,8 @@ Title::Title() : Base(eType_Scene)
 	m_haikei.SetSize(1920, 1080);
 	m_haikei.SetPos(0, 0);
 	m_cnt = 0;
+	m_alpha = 0.0f;
+	m_fontstate = 0;
 	SOUND("Kyoku")->Play();
 }
 
@@ -58,7 +60,7 @@ void Title::Draw()
 
 	m_haikei.Draw();
 	m_title.Draw();
-	m_Logo.Draw();
+	//m_Logo.Draw();
 	m_start.Draw();
 	
 }
