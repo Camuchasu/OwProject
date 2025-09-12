@@ -1,7 +1,7 @@
 #include "Goal.h"
 #include "Title/Title.h"
 #include "Game/Player.h"
-
+#include"Goal/Clear.h"
 Goal::Goal(const CVector2D& pos,int type)
 :Base(eType_Goal)
 {
@@ -38,7 +38,7 @@ void Goal::Collision(Base* b)
 				}
 				if (m_type == 0)
 				{
-					Base::Add(new Title());
+					Base::Add(new Clear());
 				}
 			}
 			break;

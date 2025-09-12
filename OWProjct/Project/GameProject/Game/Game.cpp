@@ -23,7 +23,7 @@ Game::Game()
 	Base::Add(new Needle(CVector2D(4900, 900),0));
 	Base::Add(new Needle(CVector2D(5050, 900),1));
 	Base::Add(new Needle(CVector2D(5100, 900),1));
-	Base::Add(new Player(CVector2D(300, 900), true));
+	Base::Add(new Player(CVector2D(5400, 900), true));
 	Base::Add(new Item(CVector2D(1500, 500),true));
 	//Base::Add(new Brock(CVector2D(2100, 800)));
 	Base::Add(new PitFall(CVector2D(2700, 900)));
