@@ -65,3 +65,12 @@ void Item::Collision(Base* b)
 		break;
 	}
 }
+static TexAnim _run[] = {
+	{ 0,5 },
+	{ 1,5 },
+	{ 2,5 },
+	{ 3,5 },
+};
+TexAnimData Item_anim_data[] = {
+	ANIMDATA(_run),
+};

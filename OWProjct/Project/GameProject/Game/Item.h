@@ -11,3 +11,4 @@ public:
 	void Draw();
 	void Collision(Base* b);
 };
+extern TexAnimData Item_anim_data[];
