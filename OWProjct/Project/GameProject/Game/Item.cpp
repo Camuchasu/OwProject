@@ -34,7 +34,7 @@ void Item::Draw()
 	m_mush.SetSize(100,100);
 	m_mush.SetPos(GetScreenPos(m_pos));
 	m_mush.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Item::Collision(Base* b)

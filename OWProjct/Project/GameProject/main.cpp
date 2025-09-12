@@ -101,7 +101,7 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy/Run.png", Enemy_anim_data,30,38));
 	ADD_RESOURCE("NeedleDossin", CImage::CreateImage("Image/Gimmick/NDSeat.png", Gimmick_anim_data,54,52));
 	ADD_RESOURCE("Needle", CImage::CreateImage("Image/Gimmick/Needle.png"));
-	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom_2.png",0,64,64));
+	ADD_RESOURCE("Mushroom", CImage::CreateImage("Image/Item/Mushroom3.png"));
 	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/Gameover/Gameover.png"));
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal/Goal1.png"));
 	ADD_RESOURCE("UI1", CImage::CreateImage("Image/UI/UIR.png"));
@@ -109,11 +109,21 @@ void Init(void)
 	ADD_RESOURCE("UI3", CImage::CreateImage("Image/UI/x.png"));
 	ADD_RESOURCE("UI4", CImage::CreateImage("Image/UI/ki-bo-do.png"));
 	ADD_RESOURCE("Sl", CImage::CreateImage("Image/Gameover/Supplement.png"));
+
+
+
+
+
+
+
+
 	//“yŠò
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title/Title.png"));
 	ADD_RESOURCE("Logo", CImage::CreateImage("Image/Title/Logo.png"));
 	ADD_RESOURCE("Haikei", CImage::CreateImage("Image/Title/Title.Haikei.png"));
 	SOUND("Kyoku")->Load("Sound/Title.Kyoku.mp3", 1);
+
+
 
 
 
@@ -129,6 +139,8 @@ void Init(void)
 	SOUND("Death")->Load("Sound/Death.mp3", 1);
 	SOUND("LevelUp")->Load("Sound/LevelUp.mp3", 1);
 	SOUND("GameOver")->Load("Sound/GameOver.mp3", 1);
+
+
 
 
 

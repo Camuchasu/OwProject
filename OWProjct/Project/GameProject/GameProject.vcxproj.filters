@@ -44,6 +44,9 @@
     <ClInclude Include="UI\UI.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="Goal\Clear.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -88,6 +91,9 @@
     </ClCompile>
     <ClCompile Include="UI\UI.cpp">
       <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal\Clear.cpp">
+      <Filter>Goal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
